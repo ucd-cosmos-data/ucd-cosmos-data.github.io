@@ -1,0 +1,40 @@
+[project]
+name = "cosmos"
+version = "0.1.0"
+requires-python = ">=3.12, <3.13"
+dependencies = [
+    # Jupyter
+    "jupyter",
+    "ipywidgets",
+    "ipython",
+    # Data
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "statsmodels",
+    "palmerpenguins",
+    # Visualization
+    "matplotlib",
+    "seaborn",
+    "plotly",
+    # NLP
+    "textblob",
+    # RL
+    "gymnasium",
+    # ML frameworks
+    "torch",
+    "torchvision",
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu" },
+]
+torchvision = [
+    { index = "pytorch-cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

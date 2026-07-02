@@ -1,0 +1,51 @@
+baseURL: https://ucd-cosmos-data.github.io/
+locale: en-us
+title: UC Davis COSMOS Cluster 11
+theme: ["PaperMod"]
+
+params:
+  disableThemeToggle: true
+  ShowCodeCopyButtons: true
+  math: true
+  assets:
+    favicon: "images/logo.png"
+    favicon16x16: "images/logo.png"
+    favicon32x32: "images/logo.png"
+    apple_touch_icon: "images/logo.png"
+
+menu:
+  main:
+    - name: About
+      url: /
+      weight: 1
+    - name: Schedule
+      url: /schedule/
+      weight: 2
+      pre: "🗓️ "
+    - name: Lecture
+      url: /lecture/
+      weight: 3
+      pre: "📖 "
+    - name: Lab
+      url: /lab/
+      weight: 4
+      pre: "💻 "
+    - name: Project
+      url: /project/
+      weight: 5
+      pre: "🗃️ "
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - $$
+            - $$
+        enable: true
+caches:
+  images:
+    dir: :cacheDir/images
