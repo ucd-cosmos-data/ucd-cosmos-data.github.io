@@ -123,4 +123,4 @@ Please follow the instructions.
 - **(Optional)** If you'd like to change the theme, pick one from [gohugothemes.com/popular/free](https://www.gohugothemes.com/popular/free/) and let me know by this Saturday. I can apply it over the weekend.
 
 #### Need help?
-If you run into any issues with your website, don't hesitate to reach out. Just add me as a collaborator so I can take a look.
+If you run into any issues with your website, don't hesitate to reach out!
