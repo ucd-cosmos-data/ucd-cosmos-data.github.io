@@ -1,11 +1,10 @@
 # 2026 UC Davis COSMOS Cluster 11: Beyond the Numbers
 
-Instructors:  [Xiucai Ding](https://xcding1212.github.io) and [Shizhe Chen](https://www.chenshizhe.com)
-Teacher Fellow: Chen Qian
-Teaching Assistant: Wonjun Seo and Phoebe McDonald
-
-Prerequisite: Algebra II or Integrated Math II, Programming Experience (recommended but not required)
-Typical field trips: California Academy of Sciences, Exploratorium
+- Instructors:  [Xiucai Ding](https://xcding1212.github.io) and [Shizhe Chen](https://www.chenshizhe.com)
+- Teacher Fellow: Chen Qian
+- Teaching Assistant: Wonjun Seo and Phoebe McDonald
+- Prerequisite: Algebra II or Integrated Math II, Programming Experience (recommended but not required)
+- Typical field trips: California Academy of Sciences, Exploratorium
 
 Data is everywhere—from social media trends that shape our daily interactions to scientific research that drives discoveries—and the ability to harness this data responsibly is a skill of growing importance.
 This cluster offers courses crafted for high school students who are eager to apply their mathematical knowledge to gain insights into the world of data science.
