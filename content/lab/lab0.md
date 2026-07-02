@@ -5,7 +5,7 @@ summary: "Homebrew and Winget"
 ---
 
 ## macOS -- Homebrew
-**Homebrew** is a free, open-source package manager for macOS that lets you install, update, and manage command-line tools and software from the terminal.
+> **Homebrew** is the standard command-line package manager for macOS that lets you install software with a single command (e.g., `brew install <PACKAGE_NAME>`) instead of downloading installers from websites.
 
 If you already have **Homebrew** on your Mac, no further steps are required.
 
@@ -32,9 +32,9 @@ If you already have **Homebrew** on your Mac, no further steps are required.
    ```
 
 ## Windows -- winget
+> **Winget** is Windows' built-in command-line package manager that lets you install software with a single command (e.g., `winget install <PACKAGE_NAME>`) instead of downloading installers from websites.
 
 **Winget** comes pre-installed on Windows 10/11.
-> ⚠️ If you are using older version of Windows, please talk to me during the lab session.
 
 1. Open **PowerShell**.
 2. Type the following and press `enter`.

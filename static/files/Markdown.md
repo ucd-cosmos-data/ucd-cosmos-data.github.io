@@ -13,7 +13,7 @@ To create a new paragraph or visible line break, press Enter twice (i.e., leave 
 
 not just one.
 
-> You can even type emojis like 😎
+You can even type emojis like 😎
 
 ## Headings
 
@@ -22,7 +22,6 @@ Use `#` for headings. The number of `#` symbols indicates the level.
 # Heading 1
 ## Heading 2
 ### Heading 3
-
 #### Heading 4
 
 ## 1. Emphasis

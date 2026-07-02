@@ -31,7 +31,7 @@ In today's Lab session, we will:
 
 #### After installation (Mac and Windows)
 
-1. Close all terminals and reopen **Terminal** (Mac) or **cmd** (Windows).
+1. Close all terminals and reopen **Terminal** (Mac) or **PowerShell** (Windows).
 2. Type the following and press `Return`. If **Git** is successfully installed, then the version number will be displayed.
     ```
     hugo version
@@ -43,8 +43,8 @@ Every group will maintain a group website to archive projects.
 
 ### Clone
 
-1. Move to (https://github.com/ucd-cosmos-data).
-2. Click the "Repositories", and then click "<GROUP_NAME>" repository.
+1. Move to [Github Organization page](https://github.com/ucd-cosmos-data).
+2. Click the "Repositories", and then click "<26-GROUP_NAME>" repository.
 3. Click the green "<> Code" button, then copy URL.
 4. Open the `cosmos/` directory in **VS Code**.
 5. Press `` Ctrl+Shift+` `` to open the terminal.
@@ -64,17 +64,16 @@ Every group will maintain a group website to archive projects.
 
 The workflow for updating the group website is:
 
-1. Edit the website (e.g. add pages or change config) on your own machine.
+1. Edit the website (e.g. add pages or change config) on your own machine (**local**).
 2. Preview your changes with `hugo server`.
 3. Have other members review.
-4. Deploy.
-5. See the updated live website.
+4. Deploy (**public**).
+5. See the updated live website at `https://ucd-cosmos-data.github.io/<GROUP_NAME>`.
 
-We will use **Git** for the Steps 3 and 4, which will be covered in tomorrow's Lab session. For the remaining today, we will learn how **hugo** builds the website and basic **Markdown** syntax.
+We will use **Git** for Steps 3 and 4, which will be covered in tomorrow's Lab session. For the rest of today, we will learn how **Hugo** builds the website and basic **Markdown** syntax.
 
 ### How It Works
-
-#### Current Directory Structure
+**Current Directory Structure**
 
 ```
 cosmos/
@@ -100,7 +99,14 @@ cosmos/
 └── ...
 ```
 
+- Hugo reads the **Markdown** files in `content/` and converts each one into an HTML page.
+- `layouts/` and `themes/` provide the templates that decide how that content is displayed (e.g. header, footer, page style).
+- `static/` files (images, PDFs, etc.) are copied over as-is, without any conversion.
+- `hugo.yaml` controls site-wide settings (title, menus, theme selection, etc.) that apply across all pages.
+- Running `hugo server` combines all of this and serves a live preview of the site locally.
+
 ## II. Markdown
+
 - <a href="/files/Markdown.md" download="Markdown.md">Markdown.md</a>
 
 ## III. Make yours!
