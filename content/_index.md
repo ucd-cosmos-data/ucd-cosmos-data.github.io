@@ -1,7 +1,4 @@
----
-title: "About"
-layout: "single"
----
+
 <div class="title-header">
   <img src="/images/logo.png" class="site-logo">
   <h1>Beyond the Numbers <span class="subtitle">Summer 2026</span></h1>
