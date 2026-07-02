@@ -1,3 +1,6 @@
+---
+layout: "single"
+---
 
 <div class="title-header">
   <img src="/images/logo.png" class="site-logo">
