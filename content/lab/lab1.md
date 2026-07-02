@@ -115,13 +115,13 @@ Before starting, create a directory `cosmos` wherever you prefer. Throughout the
 
 ```
 cosmos/
-├── lecture/
-|   ├── notes/          # Put lecture notes here
-|   │   └── ...
-|   └── code/           # Put code files provided in lectures here
-|       └── ...
 ├── lab/                # Put lab materials here
 |   └── ...
+├── lecture/
+|   ├── code/           # Put code files provided in lectures here
+|   |   └── ...
+|   └── notes/          # Put lecture notes here
+|       └── ...
 └── etc/                # Misc files
     └── ...
 ```
@@ -165,12 +165,12 @@ These files specify the Python version and all required packages for the course.
 
 ### Setup Python and Virtual Environment
 
-1. Open **Terminal** (Mac) or **PowerShell** (Windows) at the `cosmos/` directory.
-2. Run the following command. **uv** will automatically install the correct Python version and all required packages based on the configuration files you downloaded.
+1. Open `cosmos/` directory in **VS Code**.
+2. Press `` Ctrl+Shift+` `` to open the terminal.
+3. Run the following command. **uv** will automatically install the correct Python version and all required packages based on the configuration files you downloaded.
     ```
     uv sync
     ```
-3. Open `cosmos/` directory in **VS Code**.
 4. Create a new file named `test.ipynb` inside `cosmos/`.
 5. Click **Select Kernel** at the top right, then choose **Python Environments** → select `cosmos` (or `.venv`).
 6. Create the code cell.
@@ -201,22 +201,23 @@ If you want to add packages that aren't included in our environment, follow the 
 ### Current Directory Structure
 ```
 cosmos/
+├── .venv/              # Python virtual environment
+│   └── ...
+├── lab/                # Put lab materials here
+|   └── ...
 ├── lecture/
-|   ├── notes/
-|   │   └── ...
-|   ├── code/
-|   │   └── ...
-|   ├── lab/
-|   │   └── ...
-│   └── ...
-├── etc/
-│   └── ...
-├── test.ipynb
-├── .venv/
-├── .python-version
-├── pyproject.toml
-└── uv.lock
+|   ├── code/           # Put code files provided in lectures here
+|   |   └── ...
+|   └── notes/          # Put lecture notes here
+|       └── ...
+├── etc/                # Misc files
+|   └── ...
+├── test.ipynb          # Test ipynb
+├── pyproject.toml      # Configuration file for python project
+└── uv.lock             # Record of package versions
 ```
+
+You may delete `test.ipynb`.
 
 ## Conclusion
 With this, we're all now on exactly the same page. From now on, we'll always have the `cosmos` folder open in **VS Code** and do everything from there.

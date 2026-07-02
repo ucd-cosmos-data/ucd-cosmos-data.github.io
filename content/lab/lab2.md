@@ -38,8 +38,9 @@ In today's Lab session, we will:
     ```
 
 ## II. Group Website
-Every group will maintain a group website to archive projects.
-
+- Every group will maintain a group website to archive its projects.
+- Your group website is available at `https://ucd-cosmos-data.github.io/<GROUP_NAME>`. You can also find it from the [course website](https://ucd-cosmos-data.github.io/project/)
+- This site is built with Hugo and hosted on Github Pages.
 
 ### Clone
 
@@ -60,7 +61,12 @@ Every group will maintain a group website to archive projects.
    ```bash
    hugo server
    ```
-   This is the **local** preview server, before deployment.
+   Find the following in the output:
+   ```
+   Web Server is available at http://localhost:<NUMBERS>/<GROUP_NAME>
+   ```
+9. Copy `https://localhost:<NUMBERS>/<GROUP_NAME>`, paste it to the web browser, then press `Return`. This is the **local** preview server, before deployment.
+10. Go back to the Terminal tab in VS Code, and press `Ctrl + C` to stop.
 
 The workflow for updating the group website is:
 
@@ -70,15 +76,17 @@ The workflow for updating the group website is:
 4. Deploy (**public**).
 5. See the updated live website at `https://ucd-cosmos-data.github.io/<GROUP_NAME>`.
 
-We will use **Git** for Steps 3 and 4, which will be covered in tomorrow's Lab session. For the rest of today, we will learn how **Hugo** builds the website and basic **Markdown** syntax.
+The `<GROUP_NAME>/.git/` directory connects your local repo to the remote repo, which makes Steps 3 and 4 possible. We will learn more about this in tomorrow's lab session. For the rest of today, we will learn how **Hugo** builds the website and basic **Markdown** syntax.
 
 ### How It Works
 **Current Directory Structure**
 
 ```
 cosmos/
-├── <GROUP_NAME>/                         # Group website repo
-│   ├── .github/                          # GitHub config for building website. DO NOT edit this directory.
+├── <GROUP_NAME>/
+│   ├── .git                              # Git. It is hidden in VS Code.
+│   │   └── ...
+│   ├── .github/                          # GitHub config for building website
 │   │   └── ...
 │   ├── content/                          # Markdown content (pages, posts)
 │   │   └── ...
@@ -92,10 +100,14 @@ cosmos/
 │   ├── .gitignore                        # Contains list of files that git ignores
 │   ├── hugo.yaml                         # Website config (baseURL, theme, menus, params)
 │   └── README.md                         # Repo description
+├── .venv/
+│   └── ...
+├── lab/
+|   └── ...
 ├── lecture/
-│   └── ...
+|   └── ...
 ├── etc/
-│   └── ...
+|   └── ...
 └── ...
 ```
 
