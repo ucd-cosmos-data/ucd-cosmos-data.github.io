@@ -1,5 +1,4 @@
 # 2026 UC Davis COSMOS Cluster 11: Beyond the Numbers
-## 2026 UC Davis COSMOS Cluster 11: Beyond the Numbers
 
 Instructors:  [Xiucai Ding](https://xcding1212.github.io) and [Shizhe Chen](https://www.chenshizhe.com)
 Teacher Fellow: Chen Qian
