@@ -8,22 +8,22 @@ During the final week of the program, each group will analyze their assigned dat
 - [Repo for demo website](https://github.com/ucd-cosmos-data/demo)
 
 
-## The Deep Learners
+## [The Deep Learners](https://ucd-cosmos-data.github.io/26-the-deep-learners/)
 - Members:
 - Dataset:
 
-## The Optimizers
+## [The Optimizers](https://ucd-cosmos-data.github.io/26-the-optimizers/)
 - Members:
 - Dataset:
 
-## The Data Miners
+## [The Data Miners](https://ucd-cosmos-data.github.io/26-the-data-miners/)
 - Members:
 - Dataset:
 
-## The Backpropagators
+## [The Backpropagators](https://ucd-cosmos-data.github.io/26-the-backpropagators/)
 - Members:
 - Dataset:
 
-## The Pattern Seekers
+## [The Pattern Seekers](https://ucd-cosmos-data.github.io/26-the-pattern-seekers/)
 - Members:
 - Dataset:
