@@ -36,7 +36,7 @@ Data is everywhere—from social media trends that shape our daily interactions 
 
 <div class="photo-row">
   <figure>
-    <img src="/images/logo.png">
+    <img src="/images/staff/tf_qian.jpg">
     <figcaption>Chen Qian</figcaption>
   </figure>
 </div>
@@ -57,7 +57,7 @@ Data is everywhere—from social media trends that shape our daily interactions 
     <figcaption>Wonjun Seo</figcaption>
   </figure>
   <figure>
-    <img src="/images/logo.png">
+    <img src="/images/staff/ta_mcdonald.jpg">
     <figcaption>Phoebe McDonald</figcaption>
   </figure>
 </div>
