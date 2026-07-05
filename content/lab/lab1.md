@@ -24,7 +24,7 @@ In today's Lab session, we will:
 - If you already have a **Github** account, go to [I.1](#i1-verify-your-installation).
 - If not, go to <https://github.com> and create a new account.
     > ⚠️ Use your **primary** email address.
-- All students will be invited to the Github Organization.
+- All students will be invited to the [Github Organization](https://github.com/ucd-cosmos-data).
 
 ### Installation
 

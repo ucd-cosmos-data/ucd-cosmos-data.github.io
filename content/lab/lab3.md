@@ -2,6 +2,7 @@
 title: "Lab03: Collaboration"
 author: "Wonjun Seo"
 summary: "GitHub Collaboration and Workflow"
+draft: true
 ---
 **VS Code Extensions**
 Install **GitHub Pull Requests** and **GitLens** extensions.
@@ -93,7 +94,7 @@ We are now ready to start! Throughout the course, each group will work on severa
 
 ```
 cosmos/
-├── <GROUP_NAME>-analysis/
+├── 26-<GROUP_NAME>-analysis/
 │   ├── .git/
 │   │   └── ...
 │   ├── proj1/
@@ -110,7 +111,7 @@ cosmos/
 │   │   └── ...
 │   ├── .gitignore
 │   └── README.md
-├── <GROUP_NAME>/
+├── 26-<GROUP_NAME>/
 │   └── ...
 ├── .venv/
 │   └── ...

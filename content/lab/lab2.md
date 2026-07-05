@@ -2,6 +2,7 @@
 title: "Lab02: Group Website"
 author: "Wonjun Seo"
 summary: "Hugo and Markdown"
+draft: true
 ---
 ## Goal
 In today's Lab session, we will:
@@ -39,7 +40,7 @@ In today's Lab session, we will:
 
 ## II. Group Website
 - Every group will maintain a group website to archive its projects.
-- Your group website is available at `https://ucd-cosmos-data.github.io/<GROUP_NAME>`. You can also find it from the [course website](https://ucd-cosmos-data.github.io/project/)
+- Your group website is available at `https://ucd-cosmos-data.github.io/26-<GROUP_NAME>`. You can also find it from the [course website](https://ucd-cosmos-data.github.io/project/)
 - This site is built with Hugo and hosted on Github Pages.
 
 ### Clone
@@ -51,11 +52,11 @@ In today's Lab session, we will:
 5. Press `` Ctrl+Shift+` `` to open the terminal.
 6. Type `git clone --recurse-submodules `, paste the URL, then press `Return`. For example,
    ```bash
-   git clone --recurse-submodules https://github.com/ucd-cosmos-data/<GROUP_NAME>.git
+   git clone --recurse-submodules https://github.com/ucd-cosmos-data/26-<GROUP_NAME>.git
    ```
-7. Move to `<GROUP_NAME>/` directory.
+7. Move to `26-<GROUP_NAME>/` directory.
    ```bash
-   cd <GROUP_NAME>
+   cd 26-<GROUP_NAME>
    ```
 8. Run the following:
    ```bash
@@ -63,9 +64,9 @@ In today's Lab session, we will:
    ```
    Find the following in the output:
    ```
-   Web Server is available at http://localhost:<NUMBERS>/<GROUP_NAME>
+   Web Server is available at http://localhost:<NUMBERS>/26-<GROUP_NAME>
    ```
-9. Copy `https://localhost:<NUMBERS>/<GROUP_NAME>`, paste it to the web browser, then press `Return`. This is the **local** preview server, before deployment.
+9. Copy `https://localhost:<NUMBERS>/26-<GROUP_NAME>`, paste it to the web browser, then press `Return`. This is the **local** preview server, before deployment.
 10. Go back to the Terminal tab in VS Code, and press `Ctrl + C` to stop.
 
 The workflow for updating the group website is:
@@ -74,16 +75,16 @@ The workflow for updating the group website is:
 2. Preview your changes with `hugo server`.
 3. Have other members review.
 4. Deploy (**public**).
-5. See the updated live website at `https://ucd-cosmos-data.github.io/<GROUP_NAME>`.
+5. See the updated live website at `https://ucd-cosmos-data.github.io/26-<GROUP_NAME>`.
 
-The `<GROUP_NAME>/.git/` directory connects your local repo to the remote repo, which makes Steps 3 and 4 possible. We will learn more about this in tomorrow's lab session. For the rest of today, we will learn how **Hugo** builds the website and basic **Markdown** syntax.
+The `26-<GROUP_NAME>/.git/` directory connects your local repo to the remote repo, which makes Steps 3 and 4 possible. We will learn more about this in tomorrow's lab session. For the rest of today, we will learn how **Hugo** builds the website and basic **Markdown** syntax.
 
 ### How It Works
 **Current Directory Structure**
 
 ```
 cosmos/
-├── <GROUP_NAME>/
+├── 26-<GROUP_NAME>/
 │   ├── .git                              # Git. It is hidden in VS Code.
 │   │   └── ...
 │   ├── .github/                          # GitHub config for building website
