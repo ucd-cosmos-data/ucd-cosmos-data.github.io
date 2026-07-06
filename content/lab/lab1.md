@@ -71,7 +71,7 @@ You may skip this section if all the following are satisfied:
 
 If you are not sure about any of these, please follow the instruction accordingly.
 
-### IInstallation
+### Installation
 
 #### Mac
 
@@ -106,7 +106,7 @@ If you are not sure about any of these, please follow the instruction accordingl
 
 ### Extensions
 - Click the extension icon on the left sidebar.
-- Search and install `Python` and `Jupyter` extensions.
+- Search and install `Python`, `Jupyter`, and `Codex` extensions.
 
 ## III. Python (uv)
 > **uv** is a fast Python package and project manager.
