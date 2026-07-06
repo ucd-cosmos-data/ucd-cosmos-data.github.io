@@ -104,6 +104,10 @@
   color: #c0392b;
 }
 
+.cal-grid > div:nth-child(7n) {
+  color: #c0392b;
+}
+
 
 .cal-day-name {
   font-size: 15px;
@@ -135,6 +139,10 @@
   line-height: 1.1;
   margin-top: 10px;
   word-break: break-word;
+}
+
+.cal-cell:nth-child(7n) .cal-date {
+  color: #c0392b;
 }
 
 .cal-cell:nth-child(7n+1) .cal-date {
@@ -192,4 +200,5 @@
     margin-top: 4px;
     line-height: 1.2;
   }
+
 }

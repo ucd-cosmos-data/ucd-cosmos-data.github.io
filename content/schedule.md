@@ -18,27 +18,37 @@ title: "Schedule"
     <div class="cal-cell"><span class="cal-date">7/8</span></div>
     <div class="cal-cell"><span class="cal-date">7/9</span></div>
     <div class="cal-cell"><span class="cal-date">7/10</span></div>
-    <div class="cal-cell"><span class="cal-date">7/11</span></div>
+    <div class="cal-cell cal-important"><span class="cal-date">7/11</span>
+    <span class="cal-note">Rec Pool</span></div>
     <div class="cal-cell"><span class="cal-date">7/12</span></div>
     <div class="cal-cell"><span class="cal-date">7/13</span></div>
     <div class="cal-cell"><span class="cal-date">7/14</span></div>
-    <div class="cal-cell"><span class="cal-date">7/15</span></div>
-    <div class="cal-cell"><span class="cal-date">7/16</span></div>
+    <div class="cal-cell cal-important"><span class="cal-date">7/15</span>
+    <span class="cal-note">Dataset assignment</span></div>
+    <div class="cal-cell cal-important"><span class="cal-date">7/16</span>
+    <span class="cal-note">Cal Academy</span></div>
     <div class="cal-cell"><span class="cal-date">7/17</span></div>
-    <div class="cal-cell"><span class="cal-date">7/18</span></div>
+    <div class="cal-cell cal-important"><span class="cal-date">7/18</span>
+    <span class="cal-note">Baseball</span></div>
     <div class="cal-cell"><span class="cal-date">7/19</span></div>
     <div class="cal-cell"><span class="cal-date">7/20</span></div>
-    <div class="cal-cell"><span class="cal-date">7/21</span></div>
+    <div class="cal-cell cal-important"><span class="cal-date">7/21</span>
+    <span class="cal-note">Exploratorium</span></div>
     <div class="cal-cell"><span class="cal-date">7/22</span></div>
     <div class="cal-cell"><span class="cal-date">7/23</span></div>
     <div class="cal-cell"><span class="cal-date">7/24</span></div>
     <div class="cal-cell"><span class="cal-date">7/25</span></div>
     <div class="cal-cell"><span class="cal-date">7/26</span></div>
-    <div class="cal-cell"><span class="cal-date">7/27</span></div>
-    <div class="cal-cell"><span class="cal-date">7/28</span></div>
-    <div class="cal-cell"><span class="cal-date">7/29</span></div>
-    <div class="cal-cell"><span class="cal-date">7/30</span></div>
-    <div class="cal-cell"><span class="cal-date">7/31</span></div>
+    <div class="cal-cell cal-important"><span class="cal-date">7/27</span>
+    <span class="cal-note">Project</span></div>
+    <div class="cal-cell cal-important"><span class="cal-date">7/28</span>
+    <span class="cal-note">Project</span></div>
+    <div class="cal-cell cal-important"><span class="cal-date">7/29</span>
+    <span class="cal-note">Project</span></div>
+    <div class="cal-cell cal-important"><span class="cal-date">7/30</span>
+    <span class="cal-note">Project</span></div>
+    <div class="cal-cell cal-important"><span class="cal-date">7/31</span>
+    <span class="cal-note">Presentation Setup</span></div>
     <div class="cal-cell cal-important"><span class="cal-date">8/1</span>
     <span class="cal-note">Closing Day</span></div>
   </div>
