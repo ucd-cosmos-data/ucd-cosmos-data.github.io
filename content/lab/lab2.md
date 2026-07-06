@@ -2,7 +2,6 @@
 title: "Lab02: Group Website"
 author: "Wonjun Seo"
 summary: "Hugo and Markdown"
-draft: true
 ---
 ## Goal
 In today's Lab session, we will:
