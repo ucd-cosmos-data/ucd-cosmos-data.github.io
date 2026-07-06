@@ -1,5 +1,5 @@
 ---
-title: "Schedule"
+title: "Lecture"
 ---
 
 ### Lecture One (7/6)
