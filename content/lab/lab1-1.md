@@ -1,5 +1,5 @@
 ---
-title: "Lab01: Software Setup"
+title: "Lab01-1: Software Setup"
 author: "Wonjun Seo"
 summary: "Git, VS Code, and Python"
 ---

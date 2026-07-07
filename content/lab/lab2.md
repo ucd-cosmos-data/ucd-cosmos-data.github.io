@@ -1,138 +1,148 @@
 ---
-title: "Lab02: Group Website"
+title: "Lab02: Collaboration"
 author: "Wonjun Seo"
-summary: "Hugo and Markdown"
+summary: "GitHub Collaboration and Workflow"
+draft: true
 ---
-## Goal
-In today's Lab session, we will:
+**VS Code Extensions**
 
-- Create a group website with hugo.
-- Learn Markdown Syntax.
+Install **GitHub Pull Requests** and **GitLens** extensions.
 
-## I. Hugo
+## I. GitHub Collaboration
 
-> Hugo is a fast, open-source static site generator that builds websites from **Markdown** files.
+### Quick Overview
 
-#### Mac
+- **Repository (Repo)**: A project's folder tracked by Git, containing all files and their full history of changes.
+- **Remote repo**: The copy of the repository hosted on **GitHub**, shared with your team.
+- **Local repo**: The copy of the repository on your own computer, where you make and test changes.
+- **Clone**: Download a copy of a remote repository to create your local repository.
+- **Branch**: A separate line of development.
+- **`main`**: The official, stable branch of the project that everyone works from.
+- **Stage**: Mark specific changed files to be included in your next commit.
+- **Commit**: Save your staged changes as a snapshot in your local repository, along with a message describing what changed.
+- **Push**: Upload your local commits to the remote repository.
+- **Pull**: Download and merge changes from the remote repository into your local repository.
+- **Sync**: A combined pull + push. It first pulls any new remote changes, then pushes your local commits. This is what VS Code's **Sync Changes** button does.
+-  **Fetch**: Download new changes from the remote repository without merging them into your local branch.
+- **Merge**: Combine the changes from one branch into another, e.g. bringing your branch's changes into `main`.
+- **Pull Request (PR)**: A request to merge one branch into another, giving teammates a chance to review the changes before they're merged.
+- **Conflict**: Happens when Git can't automatically combine changes. It must be resolved manually before merging can continue.
 
-1. Open **Terminal**.
-2. Type the following and press `Return`.
-    ```
-    brew install hugo
-    ```
+> **IMPORTANT**: The first thing you should do whenever you open a repo is click **Sync Changes** to make sure `main` is up to date.
 
-#### Windows
+### File Status Markers
 
-1. Open **PowerShell**.
-2. Type the following and press `Enter`.
-    ```
-    winget install Hugo.Hugo.Extended
-    ```
+- U: Untracked (new file not yet added to the repository)
+- M: Modified
+- D: Deleted
 
-#### After installation (Mac and Windows)
+### Practice
+Let's practice with our group website repo!
 
-1. Close all terminals and reopen **Terminal** (Mac) or **PowerShell** (Windows).
-2. Type the following and press `Return`. If **Git** is successfully installed, then the version number will be displayed.
-    ```
-    hugo version
-    ```
+- <a href="/files/git.pdf" download="git.pdf">git.pdf</a>
 
-## II. Group Website
-- Every group will maintain a group website to archive its projects.
-- Your group website is available at `https://ucd-cosmos-data.github.io/26-<GROUP_NAME>`. You can also find it from the [course website](https://ucd-cosmos-data.github.io/project/)
-- This site is built with Hugo and hosted on Github Pages.
+**Summary**
+
+If you have a new task to complete, follow the steps below:
+1. Switch to the `main` branch and click **Sync Changes**.
+2. Create a new branch.
+3. Make changes, commit changes, and sync changes.
+4. Open a Pull Request to merge into `main`.
+5. Review & update.
+6. Merge by approving the Pull Request.
+7. Delete the new branch.
+
+### Conflict
+If you encounter a merge conflict or any other Git issues, ask your TA for help immediately.
+
+
+### Website Repo
+However, you don't need to strictly follow the guideline above for the website repo. As long as only one person works on the website repo at a time, you can work directly on the `main` branch. Even so, make sure to sync the `main` branch before starting.
+
+## II. Workflow
+In lecture, we learned about the Data Science Pipeline. Today, each group will design a custom Git workflow for their project.
+
+> **RULE**: **DO NOT** push to the `main` branch directly!
+
+Any changes to the main branch must go through a separate branch and a pull request.
+
+With this rule in mind—and using the workflow pipeline we discussed in the lecture—discuss the following questions with your group:
+
+- When to create a new branch
+- What types of work should be done within that branch
+- When to merge the branch back into the main workflow
+
+After your internal group discussion, each group will present their strategy to the class. Other groups will then provide feedback and suggestions.
+
+Through this activity, each group is expected to gain a clearer understanding of the overall workflow of the project.
+
+## III. Getting Started
+We are now ready to start! Throughout the course, each group will work on several mini projects and the final project. Again, every group will use exactly the same directory structure to avoid conflicts. To do so, we will clone the `26-<GROUP_NAME>-analysis` repo from our GitHub Organization.
 
 ### Clone
 
-1. Move to [Github Organization page](https://github.com/ucd-cosmos-data).
-2. Click the "Repositories", and then click "<26-GROUP_NAME>" repository.
-3. Click the green "<> Code" button, then copy URL.
+1. Go to the [GitHub Organization page](https://github.com/ucd-cosmos-data).
+2. Click **Repositories**, then select the `26-<GROUP_NAME>-analysis` repository.
+3. Click the green **<> Code** button, then copy the URL.
 4. Open the `cosmos/` directory in **VS Code**.
 5. Press `` Ctrl+Shift+` `` to open the terminal.
-6. Type `git clone --recurse-submodules `, paste the URL, then press `Return`. For example,
+6. Type `git clone `, paste the URL, then press `Return`. For example,
    ```bash
-   git clone --recurse-submodules https://github.com/ucd-cosmos-data/26-<GROUP_NAME>.git
+   git clone https://github.com/ucd-cosmos-data/26-<GROUP_NAME>-analysis.git
    ```
-7. Move to `26-<GROUP_NAME>/` directory.
-   ```bash
-   cd 26-<GROUP_NAME>
-   ```
-8. Run the following:
-   ```bash
-   hugo server
-   ```
-   Find the following in the output:
-   ```
-   Web Server is available at http://localhost:<NUMBERS>/26-<GROUP_NAME>
-   ```
-9. Copy `https://localhost:<NUMBERS>/26-<GROUP_NAME>`, paste it to the web browser, then press `Return`. This is the **local** preview server, before deployment.
-10. Go back to the Terminal tab in VS Code, and press `Ctrl + C` to stop.
 
-The workflow for updating the group website is:
-
-1. Edit the website (e.g. add pages or change config) on your own machine (**local**).
-2. Preview your changes with `hugo server`.
-3. Have other members review.
-4. Deploy (**public**).
-5. See the updated live website at `https://ucd-cosmos-data.github.io/26-<GROUP_NAME>`.
-
-The `26-<GROUP_NAME>/.git/` directory connects your local repo to the remote repo, which makes Steps 3 and 4 possible. We will learn more about this in tomorrow's lab session. For the rest of today, we will learn how **Hugo** builds the website and basic **Markdown** syntax.
-
-### How It Works
-**Current Directory Structure**
+#### Current Directory Structure
 
 ```
 cosmos/
+├── 26-<GROUP_NAME>-analysis/
+│   ├── .git/
+│   │   └── ...
+│   ├── proj1/
+│   │   ├── data/
+│   │   │   ├── cleaned/
+│   │   │   ├── processed/
+│   │   │   └── raw/
+│   │   ├── models/
+│   │   ├── notebooks/
+│   │   ├── results/
+│   │   │   └── figures/
+│   │   └── README.md
+│   ├── proj2/
+│   │   └── ...
+│   ├── .gitignore
+│   └── README.md
 ├── 26-<GROUP_NAME>/
-│   ├── .git                              # Git. It is hidden in VS Code.
-│   │   └── ...
-│   ├── .github/                          # GitHub config for building website
-│   │   └── ...
-│   ├── content/                          # Markdown content (pages, posts)
-│   │   └── ...
-│   ├── layouts/                          # Custom templates that override the theme (optional)
-│   │   └── ...
-│   ├── static/                           # Static assets served as-is (images, PDFs, favicon, htmls)
-│   │   └── ...
-│   ├── themes/                           # Hugo themes; PaperMod lives here (themes/PaperMod/)
-│   │   └── ...
-│   ├── ...
-│   ├── .gitignore                        # Contains list of files that git ignores
-│   ├── hugo.yaml                         # Website config (baseURL, theme, menus, params)
-│   └── README.md                         # Repo description
+│   └── ...
 ├── .venv/
 │   └── ...
 ├── lab/
-|   └── ...
+│   └── ...
 ├── lecture/
-|   └── ...
+│   └── ...
 ├── etc/
-|   └── ...
+│   └── ...
 └── ...
 ```
 
-- Hugo reads the **Markdown** files in `content/` and converts each one into an HTML page.
-- `layouts/` and `themes/` provide the templates that decide how that content is displayed (e.g. header, footer, page style).
-- `static/` files (images, PDFs, etc.) are copied over as-is, without any conversion.
-- `hugo.yaml` controls site-wide settings (title, menus, theme selection, etc.) that apply across all pages.
-- Running `hugo server` combines all of this and serves a live preview of the site locally.
+Whenever you start a new project, create a new directory with the same structure.
+> ⚠️ Even creating a new directory may result in Git conflict. Make sure that only one person of the group creates the directory, and the others sync it to update.
 
-## II. Markdown
 
-- <a href="/files/Markdown.md" download="Markdown.md">Markdown.md</a>
+Start your analysis NOW!
 
-## III. Make yours!
+## Exercise: Cleaning the Survey Responses
+1. (**One person**) Create (or rename) a project folder for the survey responses.
+2. (**One person**) Export your survery responses and upload the raw file to `data/raw/` directory through GitHub repository (`main` branch).
+3. (**One person**) Edit the `.gitignore` file properly to let git track both `data/raw/` and `data/interim/` directories.
+4. (**Every member**) Open `cosmos/` directory in VS Code, click `26-<GROUP_NAME>-analysis/` repo, and pull the `main` branch. Make sure that everyone can access the raw data.
+5. Clean the data by following your group's workflow. You may use **Codex**.
+6. After all, on your `main` branch, you should have cleaned data inside `data/interim` and `data_cleaning.ipynb` inside `notebooks/` directory.
 
-Since we haven't covered **Git** yet, please update the group website directly through the GitHub webpage instead.
-Please follow the instructions.
+Did everything go smoothly? If not, what were the reasons?
 
-### Assignments
-- Update the `hugo.yaml` file.
-  - To change the profile photo on the homepage, upload the image to the `static/` directory and update the `imageUrl` field in `hugo.yaml`.
-- Update the `README.md` file.
-- Update the **Members** tab.
-  - Add each member's name and a short introduction. To include photos, upload the image files to the `static/members/` directory, then reference the correct file names in `content/members/_index.md`.
-- **(Optional)** If you'd like to change the theme, pick one from [gohugothemes.com/popular/free](https://www.gohugothemes.com/popular/free/) and let me know by this Saturday. I can apply it over the weekend.
-
-#### Need help?
-If you run into any issues with your website, don't hesitate to reach out!
+## (Optional) Assignment
+Write a markdown file about your group's survey, and upload it to website.
+- How you designed the survey
+- How you cleaned the responses
+- ...
