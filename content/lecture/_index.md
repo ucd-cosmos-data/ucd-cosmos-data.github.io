@@ -3,8 +3,8 @@ title: "Lecture"
 ---
 
 ### Lecture One (7/6)
-- <a href="/files/lecture/DSBasics.pdf" download="DSBasics.pdf">Lecture 1 Part 1</a>
-- <a href="/files/lecture/test.ipynb" download="Introduction(Cluster).pdf">Lecture 1 Part 2 </a>
+- <a href="/static/lecture/DSBasics.pdf" download="DSBasics.pdf">Lecture 1 Part 1</a>
+- <a href="/static/lecture/test.ipynb" download="Introduction(Cluster).pdf">Lecture 1 Part 2 </a>
 
 <!--<a href="/FILE/PATH/FILE.file" download="FILE.file">LINK_TEXT-->
 <!--
