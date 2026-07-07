@@ -35,4 +35,9 @@ title: "Lecture"
 The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads `/FILE/PATH/FILE.file` as `FILE.file` to the user's local machine.
 -->
 
-### Lecture Two (7/7)
+### Lecture Three (7/8)
+
+### Lecture Four (7/9)
+
+### Lecture Five (7/10)
+
