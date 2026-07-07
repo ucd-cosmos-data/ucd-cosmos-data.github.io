@@ -9,21 +9,21 @@ During the final week of the program, each group will analyze their assigned dat
 
 
 ## [The Deep Learners](https://ucd-cosmos-data.github.io/26-the-deep-learners/)
-- Members:
+- Members: Rachel Castillo, William Liu, Vincent Lu, Warren Su, Michael Tang
 - Dataset:
 
 ## [The Optimizers](https://ucd-cosmos-data.github.io/26-the-optimizers/)
-- Members:
+- Members: Advait Ghosh, Ashley Hu, Sahil Qureshi, Shreyas Reddy, Sonia Shin
 - Dataset:
 
 ## [The Data Miners](https://ucd-cosmos-data.github.io/26-the-data-miners/)
-- Members:
+- Members: Samarth Gaggar, Ridhima Kapoor, Anirudh Nanniyur, Yuchen Wang
 - Dataset:
 
 ## [The Backpropagators](https://ucd-cosmos-data.github.io/26-the-backpropagators/)
-- Members:
+- Members: Shely Jain, Ema Kaludjerovic, Brian Qian, Liam Wagner
 - Dataset:
 
 ## [The Pattern Seekers](https://ucd-cosmos-data.github.io/26-the-pattern-seekers/)
-- Members:
+- Members: Pranav Elaprolu, Jerry Li, Advay Mandalia, Brendan Park
 - Dataset:
