@@ -2,7 +2,6 @@
 title: "Lab02: Collaboration"
 author: "Wonjun Seo"
 summary: "GitHub Collaboration and Workflow"
-draft: true
 ---
 **VS Code Extensions**
 
