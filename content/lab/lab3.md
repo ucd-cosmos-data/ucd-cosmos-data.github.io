@@ -22,6 +22,20 @@ The [**CDC PLACES County Data**](https://data.cdc.gov/500-Cities-Places/PLACES-C
 
 **Wonjun's example**: Asthma and [Air Quality Index](https://aqs.epa.gov/aqsweb/airdata/download_files.html#Annual).
 
+```python
+url = "https://data.cdc.gov/resource/i46a-9kgh.json"
+params = {
+    "$select": "stateabbr,countyname,countyfips,casthma_adjprev",
+    "stateabbr": "CA"
+}
+
+r = requests.get(url, params=params)
+r.raise_for_status()
+
+asthma_ca = pd.DataFrame(r.json())
+```
+
+
 ### Note
 - Build this work in the data analysis repository from Lab 2.
 - Store each dataset in the appropriate directory (raw, interim, processed). Modify `.gitignore` if needed.
