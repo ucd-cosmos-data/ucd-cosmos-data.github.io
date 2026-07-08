@@ -3,8 +3,8 @@ title: "Lecture"
 ---
 
 ### Lecture One (7/6)
-- <a href="/lecture/DSBasics.pdf" download="DSBasics.pdf">Lecture 1 Part 1 (pdf)</a>
-- <a href="/lecture/Introduction_Cluster.pdf" download="Introduction_Cluster.pdf">Lecture 1 Part 2 (pdf) </a>
+- <a href="/lecture/DSBasics.pdf" download="DSBasics.pdf">Lecture 1 Part 1: (Data Science Basics) (pdf)</a>
+- <a href="/lecture/Introduction_Cluster.pdf" download="Introduction_Cluster.pdf">Lecture 1 Part 2: (Introduction Cluster) (pdf) </a>
 - <a href="/lecture/Turning_Reviews_into_Data.ipynb" download="Turning_Reviews_into_Data.ipynb">Turning Reviews into Data (ipynb)</a>
 - <a href="/lecture/Turning_Images_into_Data.ipynb" download="Turning_Images_into_Data.ipynb">Turning Images into Data (ipynb)</a>
 - <a href="/lecture/Sleep_vs_TestScore_EDA.ipynb" download="Sleep_vs_TestScore_EDA.ipynb">Sleep vs Test Score EDA (ipynb)</a>
@@ -12,7 +12,7 @@ title: "Lecture"
 
 ### Lecture Two (7/7)
 
-- <a href="/lecture/DA(1).pdf" download="DA(1).pdf">Data Acquisition and Cleaning: Part 1 (pdf) </a>
+- <a href="/lecture/DA(1).pdf" download="DA(1).pdf"> Lecture 2: Data Acquisition and Cleaning: Part 1 (pdf) </a>
 - <a href="/lecture/API_CoinDesk_HandsOn.ipynb" download="API_CoinDesk_HandsOn.ipynb">API CoinDesk Hands On (ipynb)</a>
 - <a href="/lecture/BigData_VisualizationFailure_Demo.ipynb" download="BigData_VisualizationFailure_Demo.ipynb">BigData VisualizationFailure Demo (ipynb)</a>
 - <a href="/lecture/categorical_encoding_examples.ipynb" download="categorical_encoding_examples.ipynb">Categorical Encoding Examples (ipynb)</a>
@@ -40,8 +40,8 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 ### Lecture Three (7/8)
 - <a href="/lecture/eda_task1_structure.ipynb" download="eda_task1_structure.ipynb">EDA Task 1 Structure (ipynb)</a>
 - <a href="/lecture/eda_task2_summary_statistics.ipynb" download="eda_task2_summary_statistics.ipynb">EDA Task 2 Summary Statistics (ipynb)</a>
-- <a href="/lecture/eda_task3_univariate_distributions.ipynb" download="eda_task3_univariate_distributions.ipynb">EDA Task 3 Univariate Distributions</a>
-- <a href="/lecture/eda_task4_categorical_analysis.ipynb" download="eda_task4_categorical_analysis.ipynb">EDA Task 4 Categorical Analysis(ipynb)</a>
+- <a href="/lecture/eda_task3_univariate_distributions.ipynb" download="eda_task3_univariate_distributions.ipynb">EDA Task 3 Univariate Distributions (ipynb)</a>
+- <a href="/lecture/eda_task4_categorical_analysis.ipynb" download="eda_task4_categorical_analysis.ipynb">EDA Task 4 Categorical Analysis (ipynb)</a>
 
 ### Lecture Four (7/9)
 
