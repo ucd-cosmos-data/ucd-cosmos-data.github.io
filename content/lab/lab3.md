@@ -17,7 +17,7 @@ The [**CDC PLACES County Data**](https://data.cdc.gov/500-Cities-Places/PLACES-C
 
 ### Instructions
 1. Select one measure from this dataset. Read the column description for the detail of each measure.
-2. Discuss with your group members to decide on another dataset that may be meaningfully related to it. Note that this dataset should be available for **free** and measured at the **county level**.
+2. Discuss with your group members to decide on another dataset that may be meaningfully related to it. Note that this dataset should be reliable, available for **free**, and measured at the **county level**.
 3. Acquire two datasets for **California counties**, and merge them into a single combined dataframe.
 
 **Wonjun's example**: Asthma and [Air Quality Index](https://aqs.epa.gov/aqsweb/airdata/download_files.html#Annual).
