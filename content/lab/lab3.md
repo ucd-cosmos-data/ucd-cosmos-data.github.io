@@ -26,5 +26,6 @@ The [**CDC PLACES County Data**](https://data.cdc.gov/500-Cities-Places/PLACES-C
 - Build this work in the data analysis repository from Lab 2.
 - Store each dataset in the appropriate directory (raw, interim, processed). Modify `.gitignore` if needed.
 - Save acquisition notebooks/code in the appropriate directory with a clear name.
+- When you commit and push `.ipynb` files, please clear all output first.
 - Tomorrow we'll use the combined dataset to create plots.
 - On Monday (July 13th), present your work via group website (no additional material needed).
