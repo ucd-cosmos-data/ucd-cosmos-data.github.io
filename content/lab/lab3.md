@@ -2,7 +2,6 @@
 title: "Lab03: Python 01"
 author: "Wonjun Seo"
 summary: "Pandas and Mini project"
-draft: true
 ---
 
 ## Object-Oriented Programming (OOP) in Python
@@ -18,7 +17,7 @@ The [**CDC PLACES County Data**](https://data.cdc.gov/500-Cities-Places/PLACES-C
 
 ### Instructions
 1. Select one measure from this dataset. Read the column description for the detail of each measure.
-2. Discuss with your group members to decide on another dataset that may be meaningfully related to it. Note that this dataset should be available for **free** and measured at the **county level** in **2023**.
+2. Discuss with your group members to decide on another dataset that may be meaningfully related to it. Note that this dataset should be available for **free** and measured at the **county level**.
 3. Acquire two datasets for **California counties**, and merge them into a single combined dataframe.
 
 **Wonjun's example**: Asthma and [Air Quality Index](https://aqs.epa.gov/aqsweb/airdata/download_files.html#Annual).
@@ -28,4 +27,4 @@ The [**CDC PLACES County Data**](https://data.cdc.gov/500-Cities-Places/PLACES-C
 - Store each dataset in the appropriate directory (raw, interim, processed). Modify `.gitignore` if needed.
 - Save acquisition notebooks/code in the appropriate directory with a clear name.
 - Tomorrow we'll use the combined dataset to create plots.
-- On Monday (July 13th), present via your group website (no additional material needed).
+- On Monday (July 13th), present your work via group website (no additional material needed).
