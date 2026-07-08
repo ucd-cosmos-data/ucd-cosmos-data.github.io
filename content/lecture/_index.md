@@ -12,7 +12,7 @@ title: "Lecture"
 
 ### Lecture Two (7/7)
 
-- <a href="/lecture/DA(1).pdf" download="DA(1).pdf"> Lecture 2: Data Acquisition and Cleaning: Part 1 (pdf) </a>
+- <a href="/lecture/DA(1).pdf" download="DA(1).pdf"> Lecture 2: (Data Acquisition and Cleaning) (pdf) </a>
 - <a href="/lecture/API_CoinDesk_HandsOn.ipynb" download="API_CoinDesk_HandsOn.ipynb">API CoinDesk Hands On (ipynb)</a>
 - <a href="/lecture/BigData_VisualizationFailure_Demo.ipynb" download="BigData_VisualizationFailure_Demo.ipynb">BigData VisualizationFailure Demo (ipynb)</a>
 - <a href="/lecture/categorical_encoding_examples.ipynb" download="categorical_encoding_examples.ipynb">Categorical Encoding Examples (ipynb)</a>
