@@ -2,6 +2,7 @@
 title: "Lab03: Python 01"
 author: "Wonjun Seo"
 summary: "Pandas and Mini project"
+draft: true
 ---
 
 ## Object-Oriented Programming (OOP) in Python
@@ -11,17 +12,20 @@ summary: "Pandas and Mini project"
 - <a href="/files/pandas.ipynb" download="pandas.ipynb">pandas.ipynb</a>
 
 ## Mini Project!
-[This dataset](https://data.cdc.gov/500-Cities-Places/PLACES-County-Data-GIS-Friendly-Format-2025-releas/i46a-9kgh/about_data), the **CDC PLACES County Data** (GIS-Friendly Format, 2025 release), provides model-based small-area estimates for chronic disease prevalence, health behaviors, and preventive care practices across **every county in the United States**. Rather than direct measurements, these estimates are generated using a multilevel regression and poststratification (MRP) approach that combines individual-level responses from the Behavioral Risk Factor Surveillance System (BRFSS) with Census and American Community Survey population data, producing roughly 40 measures per county, including asthma, diabetes, obesity, high blood pressure, and access to preventive screenings.
+The [**CDC PLACES County Data**](https://data.cdc.gov/500-Cities-Places/PLACES-County-Data-GIS-Friendly-Format-2025-releas/i46a-9kgh/about_data) provides model-based estimates of chronic disease prevalence, health behaviors, and preventive care access across all **US counties in 2023**. Using multilevel regression and poststratification (MRP), it combines Behavioral Risk Factor Surveillance System (BRFSS) responses with Census/ACS population data to generate ~40 measures per county—including asthma, diabetes, obesity, high blood pressure, and preventive screening access.
 
-**In this mini project, each group will select one measure from this dataset and see what kind of factor is related to the selected measure.** (E.g. Asthma and Air Quality Index.)
+**In this mini project, each group will select one measure from this dataset and see what kind of factor is related to the selected measure.**
 
 ### Instructions
 1. Select one measure from this dataset. Read the column description for the detail of each measure.
-2. Discuss with your group members to decide on another dataset that may be meaningfully related to it. Note that this dataset should be available for free and measured at the county level.
+2. Discuss with your group members to decide on another dataset that may be meaningfully related to it. Note that this dataset should be available for **free** and measured at the **county level** in **2023**.
 3. Acquire two datasets for **California counties**, and merge them into a single combined dataframe.
 
+**Wonjun's example**: Asthma and [Air Quality Index](https://aqs.epa.gov/aqsweb/airdata/download_files.html#Annual).
+
 ### Note
-- You should build this work inside the data analysis repository created in Lab 2.
-- Store each dataset at the appropriate stage of the pipeline: raw, interim, or processed.
-- You may split the work into two, with one subgroup responsible for acquiring the disease measure and the other responsible for collecting the related dataset.
-- Tomorrow we will use the combined dataset to create a series of plots.
+- Build this work in the data analysis repository from Lab 2.
+- Store each dataset in the appropriate directory (raw, interim, processed). Modify `.gitignore` if needed.
+- Save acquisition notebooks/code in the appropriate directory with a clear name.
+- Tomorrow we'll use the combined dataset to create plots.
+- On Monday (July 13th), present via your group website (no additional material needed).
