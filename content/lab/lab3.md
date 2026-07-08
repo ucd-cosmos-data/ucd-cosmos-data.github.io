@@ -23,6 +23,9 @@ The [**CDC PLACES County Data**](https://data.cdc.gov/500-Cities-Places/PLACES-C
 **Wonjun's example**: Asthma and [Air Quality Index](https://aqs.epa.gov/aqsweb/airdata/download_files.html#Annual).
 
 ```python
+import requests
+import pandas as pd
+
 url = "https://data.cdc.gov/resource/i46a-9kgh.json"
 params = {
     "$select": "stateabbr,countyname,countyfips,casthma_adjprev",
