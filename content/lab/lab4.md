@@ -114,9 +114,14 @@ We're continuing with the mini project. In the last lab session, each group crea
 
 **Requirements**
 - You should have one scatter plot and two choropleth maps (one for the disease and one for the other factor).
-- Each figure should be numbered.
+- Each figure should have its own reference identifier and a caption with its own figure number.
+- In the main body, link to the figure whenever you mention it.
 
-### GeoJSON for Choropleth map
+#### Choropleth map in `plotly`
+- [Official guide for Choropleth map](https://plotly.com/python/choropleth-maps/)
+- [Documentation](https://plotly.github.io/plotly.py-docs/generated/plotly.express.choropleth.html)
+
+#### GeoJSON for Choropleth map
 1. Add `geopandas` package by using `uv add`.
 2. Run the following on your Jupyter notebook to obtain the GeoJSON for California counties
     ```python
@@ -125,3 +130,4 @@ We're continuing with the mini project. In the last lab session, each group crea
     ca_county = county[county['STATE'] == '06']
     ca_geojson = ca_county.__geo_interface__
     ```
+3. Use `ca_geojson` for your choropleth map!
