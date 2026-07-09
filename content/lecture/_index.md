@@ -41,6 +41,9 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 
 - <a href="/lecture/Data_Acquisition_and_Acquisition_Part_2.pdf" download="Data_Acquisition_and_Acquisition_Part_2.pdf">Lecture 3 Part 1: Data Acquisition and Acquisition Part 2 (pdf)</a>
 - <a href="/lecture/Exploratory_Data_Analysis_Part_1.pdf" download="Exploratory_Data_Analysis_Part_1.pdf"> Lecture 3 Part 2: Exploratory Data Analysis Part 1 (pdf)</a>
+
+
+### Lecture Four (7/9)
 - <a href="/lecture/clustering_iris_gmm.ipynb" download="clustering_iris_gmm.ipynb">Clustering Iris Gmm (ipynb)</a>
 - <a href="/lecture/clustering_visualization.ipynb" download="clustering_visualization.ipynb">Clustering Visualization (ipynb)</a>
 - <a href="/lecture/dim_reduction_blobs.ipynb" download="dim_reduction_blobs.ipynb">Dim Reduction Blobs (ipynb)</a>
