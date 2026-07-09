@@ -52,7 +52,10 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/eda_10_plots_walkthrough.ipynb" download="eda_10_plots_walkthrough.ipynb">Eda 10 Plots Walkthrough (ipynb)</a>
 - <a href="/lecture/eda_10_plots_with_interpretations.ipynb" download="eda_10_plots_with_interpretations.ipynb">Eda 10 Plots With Interpretations (ipynb)</a>
 - <a href="/lecture/eda_correlation_simulated_linear.ipynb" download="eda_correlation_simulated_linear.ipynb">Eda Correlation Simulated Linear (ipynb)</a>
+- <a href="/lecture/eda_task1_structure.ipynb" download="eda_task1_structure.ipynb">Eda Task 1 Structure (ipynb)</a>
 - <a href="/lecture/eda_task2_summary_statistics.ipynb" download="eda_task2_summary_statistics.ipynb">Eda Task 2 Summary Statistics (ipynb)</a>
+- <a href="/lecture/eda_task3_univariate_distributions.ipynb" download="eda_task3_univariate_distributions.ipynb">Eda Task 3 Univariate Distributions (ipynb)</a>
+- <a href="/lecture/eda_task4_categorical_analysis.ipynb" download="eda_task4_categorical_analysis.ipynb">Eda Task 4 Categorical Analysis.ipynb (ipynb)</a>
 - <a href="/lecture/eda_task5_bivariate_relationships.ipynb" download="eda_task5_bivariate_relationships.ipynb">Eda Task5 Bivariate Relationships (ipynb)</a>
 - <a href="/lecture/eda_task6_correlation_analysis.ipynb" download="eda_task6_correlation_analysis.ipynb">Eda Task6 Correlation Analysis (ipynb)</a>
 - <a href="/lecture/hypothesis_generation_iris.ipynb" download="hypothesis_generation_iris.ipynb">Hypothesis Generation Iris (ipynb)</a>
