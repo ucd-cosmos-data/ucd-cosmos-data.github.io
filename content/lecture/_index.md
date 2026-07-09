@@ -38,13 +38,7 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 -->
 
 ### Lecture Three (7/8)
-- <a href="/lecture/eda_task1_structure.ipynb" download="eda_task1_structure.ipynb">EDA Task 1 Structure (ipynb)</a>
-- <a href="/lecture/eda_task2_summary_statistics.ipynb" download="eda_task2_summary_statistics.ipynb">EDA Task 2 Summary Statistics (ipynb)</a>
-- <a href="/lecture/eda_task3_univariate_distributions.ipynb" download="eda_task3_univariate_distributions.ipynb">EDA Task 3 Univariate Distributions (ipynb)</a>
-- <a href="/lecture/eda_task4_categorical_analysis.ipynb" download="eda_task4_categorical_analysis.ipynb">EDA Task 4 Categorical Analysis (ipynb)</a>
-
 ### Lecture Four (7/9)
-- <a href="/lecture/W1-3-EDA-Univariate-Multi.ipynb" download="W1-3-EDA-Univariate-Multi.ipynb">W1-3 EDA Univariate Multi (ipynb)</a>
 - <a href="/lecture/clustering_iris_gmm.ipynb" download="clustering_iris_gmm.ipynb">Clustering Iris Gmm (ipynb)</a>
 - <a href="/lecture/clustering_visualization.ipynb" download="clustering_visualization.ipynb">Clustering Visualization (ipynb)</a>
 - <a href="/lecture/dim_reduction_blobs.ipynb" download="dim_reduction_blobs.ipynb">Dim Reduction Blobs (ipynb)</a>
@@ -55,7 +49,7 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/eda_correlation_simulated_linear.ipynb" download="eda_correlation_simulated_linear.ipynb">EDA Correlation Simulated Linear (ipynb)</a>
 - <a href="/lecture/eda_task5_bivariate_relationships.ipynb" download="eda_task5_bivariate_relationships.ipynb">EDA Task 5 Bivariate Relationships (ipynb)</a>
 - <a href="/lecture/eda_task6_correlation_analysis.ipynb" download="eda_task6_correlation_analysis.ipynb">EDA Task 6 Correlation Analysis (ipynb)</a>
-- <a href="/lecture/hypothesis_generation_iris.ipynb" download="hypothesis_generation_iris.ipynb">Hypothesis Generation Iris (ipynb)</a>
+- <a href="/lecture/hvpothesis_genezation_iris.ipynb" download="hvpothesis_genezation_iris.ipynb">Hypothesis Generation Iris (ipynb)</a>
 - <a href="/lecture/image_segmentation_kmeans.ipynb" download="image_segmentation_kmeans.ipynb">Image Segmentation Kmeans (ipynb)</a>
 - <a href="/lecture/iris_multivariate_visualization.ipynb" download="iris_multivariate_visualization.ipynb">Iris Multivariate Visualization (ipynb)</a>
 - <a href="/lecture/iris_segmentation_example.ipynb" download="iris_segmentation_example.ipynb">Iris Segmentation Example (ipynb)</a>
@@ -63,8 +57,8 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/movie_cluster_data.csv" download="movie_cluster_data.csv">Movie Cluster Data (csv)</a>
 - <a href="/lecture/task7_multivariate_visualization.ipynb" download="task7_multivariate_visualization.ipynb">Task 7 Multivariate Visualization (ipynb)</a>
 - <a href="/lecture/task8_dimensionality_reduction_all.ipynb" download="task8_dimensionality_reduction_all.ipynb">Task 8 Dimensionality Reduction All (ipynb)</a>
+- <a href="/lecture/W1-3-EDA-Univariate-Multi.ipynb" download="W1-3-EDA-Univariate-Multi.ipynb">W1-3 EDA Univariate Multi (ipynb)</a>
 - <a href="/lecture/wine_multivariate_visualization.ipynb" download="wine_multivariate_visualization.ipynb">Wine Multivariate Visualization (ipynb)</a>
-
 
 ### Lecture Five (7/10)
 
