@@ -74,3 +74,19 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/Iris_Instruction_Case_Study.md" download="Iris_Instruction_Case_Study.md">Iris Instruction Case Study (markdown)</a>
 
 ### Lecture 5 (7/10)
+- <a href="/lecture/AdaBoost_Regression.ipynb" download="AdaBoost_Regression.ipynb">AdaBoost Regression (ipynb)</a>
+- <a href="/lecture/Bagging_Regressor.ipynb" download="Bagging_Regressor.ipynb">Bagging Regressor (ipynb)</a>
+- <a href="/lecture/Decision_Tree_Regression.ipynb" download="Decision_Tree_Regression.ipynb">Decision Tree Regression (ipynb)</a>
+- <a href="/lecture/ElasticNet_Regression_Complete.ipynb" download="ElasticNet_Regression_Complete.ipynb">ElasticNet Regression Complete (ipynb)</a>
+- <a href="/lecture/Gradient_Boosted_Regression_Trees.ipynb" download="Gradient_Boosted_Regression_Trees.ipynb">Gradient Boosted Regression Trees (ipynb)</a>
+- <a href="/lecture/KNN_Regression_Complete.ipynb" download="KNN_Regression_Complete.ipynb">KNN Regression Complete (ipynb)</a>
+- <a href="/lecture/Lasso_Regression_Complete.ipynb" download="Lasso_Regression_Complete.ipynb">Lasso Regression Complete (ipynb)</a>
+- <a href="/lecture/Linear_Regression_Extended.ipynb" download="Linear_Regression_Extended.ipynb">Linear Regression Extended (ipynb)</a>
+- <a href="/lecture/Locally_Weighted_Regression_Complete.ipynb" download="Locally_Weighted_Regression_Complete.ipynb">Locally Weighted Regression Complete (ipynb)</a>
+- <a href="/lecture/Partial_Least_Squares_Regression.ipynb" download="Partial_Least_Squares_Regression.ipynb">Partial Least Squares Regression (ipynb)</a>
+- <a href="/lecture/Polynomial_Regression_General.ipynb" download="Polynomial_Regression_General.ipynb">Polynomial Regression General (ipynb)</a>
+- <a href="/lecture/Principal_Component_Regression.ipynb" download="Principal_Component_Regression.ipynb">Principal Component Regression (ipynb)</a>
+- <a href="/lecture/Random_Forest_Regression.ipynb" download="Random_Forest_Regression.ipynb">Random Forest Regression (ipynb)</a>
+- <a href="/lecture/Ridge_Regression_Complete.ipynb" download="Ridge_Regression_Complete.ipynb">Ridge Regression Complete (ipynb)</a>
+- <a href="/lecture/Spline_Regression_Complete.ipynb" download="Spline_Regression_Complete.ipynb">Spline Regression Complete (ipynb)</a>
+- <a href="/lecture/Stacking_Regressor.ipynb" download="Stacking_Regressor.ipynb">Stacking Regressor (ipynb)</a>
