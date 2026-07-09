@@ -44,6 +44,8 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 
 
 ### Lecture Four (7/9)
+- <a href="/lecture/Exploratory_Data_Analysis_Part_2.pdf" download="Exploratory_Data_Analysis_Part_2.pdf">Lecture 4 Part 1: Exploratory Data Analysis Part 2 (pdf)</a>
+- <a href="/lecture/Exploratory_Data_Analysis_Part_3.pdf" download="Exploratory_Data_Analysis_Part_2.pdf">Lecture 4 Part 2: Exploratory Data Analysis Part 3</a>
 - <a href="/lecture/clustering_iris_gmm.ipynb" download="clustering_iris_gmm.ipynb">Clustering Iris Gmm (ipynb)</a>
 - <a href="/lecture/clustering_visualization.ipynb" download="clustering_visualization.ipynb">Clustering Visualization (ipynb)</a>
 - <a href="/lecture/dim_reduction_blobs.ipynb" download="dim_reduction_blobs.ipynb">Dim Reduction Blobs (ipynb)</a>
@@ -70,3 +72,5 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/wine_multivariate_visualization.ipynb" download="wine_multivariate_visualization.ipynb">Wine Multivariate Visualization (ipynb)</a>
 - <a href="/lecture/Iris_Draft.md" download="Iris_Draft.md">Iris Draft (markdown)</a>
 - <a href="/lecture/Iris_Instruction_Case_Study.md" download="Iris_Instruction_Case_Study.md">Iris Instruction Case Study (markdown)</a>
+
+### Lecture 5 (7/10)
