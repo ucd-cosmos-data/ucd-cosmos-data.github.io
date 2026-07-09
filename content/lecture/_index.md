@@ -61,3 +61,5 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/task8_dimensionality_reduction_all.ipynb" download="task8_dimensionality_reduction_all.ipynb">Task8 Dimensionality Reduction All (ipynb)</a>
 - <a href="/lecture/W1-3-EDA-Univariate-Multi.ipynb" download="W1-3-EDA-Univariate-Multi.ipynb">W1-3 EDA Univariate Multi (ipynb)</a>
 - <a href="/lecture/wine_multivariate_visualization.ipynb" download="wine_multivariate_visualization.ipynb">Wine Multivariate Visualization (ipynb)</a>
+- <a href="/lecture/Iris_Draft.md" download="Iris_Draft.md">Iris Draft (markdown)</a>
+- <a href="/lecture/Iris_Instruction_Case_Study.md" download="Iris_Instruction_Case_Study.md">Iris Instruction Case Study (markdown)</a>
