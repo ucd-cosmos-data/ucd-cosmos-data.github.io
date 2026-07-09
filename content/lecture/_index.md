@@ -63,8 +63,6 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/wine_multivariate_visualization.ipynb" download="wine_multivariate_visualization.ipynb">Wine Multivariate Visualization (ipynb)</a>
 
 
-
-
 ### Lecture Four (7/9)
 
 
