@@ -111,4 +111,13 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/L11-Neural_Nets_III.pdf" download="L11-Neural_Nets_III.pdf">L11 Neural Nets III (pdf)</a>
 
 ### Week 3 Lecture 12 (7/21)
+- <a href="/lecture/L12-Statistical_Inference.pdf" download="L12-Statistical_Inference.pdf">L12 Statistical Inference (pdf)</a>
+
+### Week 3 Lecture 13 (7/21)
+- <a href="/lecture/L13-Causal_Inference.pdf" download="L13-Causal_Inference.pdf">L13 Causal Inference (pdf)</a>
+
+
+
+
+
 
