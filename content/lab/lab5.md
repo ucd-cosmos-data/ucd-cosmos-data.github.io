@@ -2,7 +2,6 @@
 title: "Lab05: Quiz 1"
 author: "Wonjun Seo"
 summary: "Quiz 1"
-draft: true
 ---
 
 ## Quiz 1 Solutions
