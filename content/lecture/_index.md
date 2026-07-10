@@ -94,7 +94,8 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/Stacking_Regressor.ipynb" download="Stacking_Regressor.ipynb">Stacking Regressor (ipynb)</a>
 
 ### Week 2 Lecture 7 (7/14)
-
+- <a href="/lecture/L07-Classification_Tree_Ensemble.pdf" download="L07-Classification_Tree_Ensemble.pdf">L07 Classification Tree Ensemble (pdf)</a>
+- <a href="/lecture/L07-Unsupervised_learning.pdf" download="L07-Unsupervised_learning.pdf">L07 Unsupervised Learning (pdf)</a>
 ### Week 2 Lecture 8 (7/15)
 
 ### Week 2 Lecture 9 (7/16)
