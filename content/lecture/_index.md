@@ -73,7 +73,7 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/Iris_Instruction_Case_Study.md" download="Iris_Instruction_Case_Study.md">Iris Instruction Case Study (markdown)</a>
 
 ### Week 1 Lecture 5 (7/10)
-- Chen's Dataset slides to be uploaded after lecture presentation
+- <a href="/lecture/cosmos_dataset_zoo_student_videos_siena_v18.pdf" download="cosmos_dataset_zoo_student_videos_siena_v18.pdf"> Group Project Data Sets (pdf) </a>
 
 ### Week 2 Lecture 6 (7/13)
 - <a href="/lecture/AdaBoost_Regression.ipynb" download="AdaBoost_Regression.ipynb">AdaBoost Regression (ipynb)</a>
