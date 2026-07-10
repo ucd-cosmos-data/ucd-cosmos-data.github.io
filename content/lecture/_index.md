@@ -2,7 +2,7 @@
 title: "Lecture"
 ---
 
-### Lecture One (7/6)
+### Week 1 Lecture One (7/6)
 - <a href="/lecture/DSBasics.pdf" download="DSBasics.pdf">Lecture 1 Part 1: (Data Science Basics) (pdf)</a>
 - <a href="/lecture/Introduction_Cluster.pdf" download="Introduction_Cluster.pdf">Lecture 1 Part 2: (Introduction Cluster) (pdf) </a>
 - <a href="/lecture/Turning_Reviews_into_Data.ipynb" download="Turning_Reviews_into_Data.ipynb">Turning Reviews into Data (ipynb)</a>
@@ -10,8 +10,7 @@ title: "Lecture"
 - <a href="/lecture/Sleep_vs_TestScore_EDA.ipynb" download="Sleep_vs_TestScore_EDA.ipynb">Sleep vs Test Score EDA (ipynb)</a>
 
 
-### Lecture Two (7/7)
-
+### Week 1 Lecture Two (7/7)
 - <a href="/lecture/DA(1).pdf" download="DA(1).pdf"> Lecture 2: (Data Acquisition and Cleaning) (pdf) </a>
 - <a href="/lecture/API_CoinDesk_HandsOn.ipynb" download="API_CoinDesk_HandsOn.ipynb">API CoinDesk Hands On (ipynb)</a>
 - <a href="/lecture/BigData_VisualizationFailure_Demo.ipynb" download="BigData_VisualizationFailure_Demo.ipynb">BigData VisualizationFailure Demo (ipynb)</a>
@@ -37,13 +36,13 @@ title: "Lecture"
 The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads `/FILE/PATH/FILE.file` as `FILE.file` to the user's local machine.
 -->
 
-### Lecture Three (7/8)
+### Week 1 Lecture Three (7/8)
 
 - <a href="/lecture/Data_Acquisition_and_Acquisition_Part_2.pdf" download="Data_Acquisition_and_Acquisition_Part_2.pdf">Lecture 3 Part 1: Data Acquisition and Acquisition Part 2 (pdf)</a>
 - <a href="/lecture/Exploratory_Data_Analysis_Part_1.pdf" download="Exploratory_Data_Analysis_Part_1.pdf"> Lecture 3 Part 2: Exploratory Data Analysis Part 1 (pdf)</a>
 
 
-### Lecture Four (7/9)
+### Week 1 Lecture Four (7/9)
 - <a href="/lecture/Exploratory_Data_Analysis_Part_2.pdf" download="Exploratory_Data_Analysis_Part_2.pdf">Lecture 4 Part 1: Exploratory Data Analysis Part 2 (pdf)</a>
 - <a href="/lecture/Exploratory_Data_Analysis_Part_3.pdf" download="Exploratory_Data_Analysis_Part_2.pdf">Lecture 4 Part 2: Exploratory Data Analysis Part 3 (pdf) </a>
 - <a href="/lecture/clustering_iris_gmm.ipynb" download="clustering_iris_gmm.ipynb">Clustering Iris Gmm (ipynb)</a>
@@ -73,10 +72,10 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/Iris_Draft.md" download="Iris_Draft.md">Iris Draft (markdown)</a>
 - <a href="/lecture/Iris_Instruction_Case_Study.md" download="Iris_Instruction_Case_Study.md">Iris Instruction Case Study (markdown)</a>
 
-### Lecture 5 (7/10)
+### Week 1 Lecture 5 (7/10)
 - Chen's Dataset slides to be uploaded after lecture presentation
 
-### Lecture 6 (7/13)
+### Week 2 Lecture 6 (7/13)
 - <a href="/lecture/AdaBoost_Regression.ipynb" download="AdaBoost_Regression.ipynb">AdaBoost Regression (ipynb)</a>
 - <a href="/lecture/Bagging_Regressor.ipynb" download="Bagging_Regressor.ipynb">Bagging Regressor (ipynb)</a>
 - <a href="/lecture/Decision_Tree_Regression.ipynb" download="Decision_Tree_Regression.ipynb">Decision Tree Regression (ipynb)</a>
@@ -93,3 +92,9 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/Ridge_Regression_Complete.ipynb" download="Ridge_Regression_Complete.ipynb">Ridge Regression Complete (ipynb)</a>
 - <a href="/lecture/Spline_Regression_Complete.ipynb" download="Spline_Regression_Complete.ipynb">Spline Regression Complete (ipynb)</a>
 - <a href="/lecture/Stacking_Regressor.ipynb" download="Stacking_Regressor.ipynb">Stacking Regressor (ipynb)</a>
+
+### Week 2 Lecture 7 (7/14)
+
+### Week 2 Lecture 8 (7/15)
+
+### Week 2 Lecture 9 (7/16)
