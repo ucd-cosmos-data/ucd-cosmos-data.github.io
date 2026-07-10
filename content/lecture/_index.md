@@ -115,6 +115,7 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 
 ### Week 3 Lecture 13 (7/21)
 - <a href="/lecture/L13-Causal_Inference.pdf" download="L13-Causal_Inference.pdf">L13 Causal Inference (pdf)</a>
+- <a href="/lecture/L13-Ethics.pdf" download="L13-Ethics.pdf">L13 Ethics (pdf)</a>
 
 
 
