@@ -107,6 +107,8 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/L10-Neural_Nets_II.pdf" download="L10-Neural_Nets_II.pdf">L10 Neural Nets II (pdf)</a>
 
 ### Week 3 Lecture 11 (7/20)
+- <a href="/lecture/L11-Bayesian_Analysis.pdf" download="L11-Bayesian_Analysis.pdf">L11 Bayesian Analysis (pdf)</a>
+- <a href="/lecture/L11-Neural_Nets_III.pdf" download="L11-Neural_Nets_III.pdf">L11 Neural Nets III (pdf)</a>
 
 ### Week 3 Lecture 12 (7/21)
 
