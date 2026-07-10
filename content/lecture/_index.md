@@ -74,6 +74,9 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/Iris_Instruction_Case_Study.md" download="Iris_Instruction_Case_Study.md">Iris Instruction Case Study (markdown)</a>
 
 ### Lecture 5 (7/10)
+
+
+### Lecture 6 (7/13)
 - <a href="/lecture/AdaBoost_Regression.ipynb" download="AdaBoost_Regression.ipynb">AdaBoost Regression (ipynb)</a>
 - <a href="/lecture/Bagging_Regressor.ipynb" download="Bagging_Regressor.ipynb">Bagging Regressor (ipynb)</a>
 - <a href="/lecture/Decision_Tree_Regression.ipynb" download="Decision_Tree_Regression.ipynb">Decision Tree Regression (ipynb)</a>
