@@ -74,7 +74,7 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/Iris_Instruction_Case_Study.md" download="Iris_Instruction_Case_Study.md">Iris Instruction Case Study (markdown)</a>
 
 ### Lecture 5 (7/10)
-- "Chen's Dataset Presentation to be uploaded after lecture"
+- Chen's Dataset to be uploaded after lecture presentation
 
 ### Lecture 6 (7/13)
 - <a href="/lecture/AdaBoost_Regression.ipynb" download="AdaBoost_Regression.ipynb">AdaBoost Regression (ipynb)</a>
