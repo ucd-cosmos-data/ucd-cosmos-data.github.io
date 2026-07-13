@@ -15,7 +15,7 @@ The remaining features (model fitting/evaluation/selection) of `scikit-learn` wi
 ### Data split exercise
 > Is random split always the best?
 
-- <a href="/files/data-split.pdf" download="data-split.pdf">Data split exercise</a>
+<!-->- <a href="/files/data-split.pdf" download="data-split.pdf">Data split exercise</a><-->
 
 ## MATH!
 Tomorrow, we'll study a couple of selected methods (**linear regression**, **PCA**, and more if time permitted) in detail.
