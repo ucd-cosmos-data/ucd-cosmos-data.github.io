@@ -96,6 +96,11 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 ### Week 2 Lecture 7 (7/14)
 - <a href="/lecture/L07-Classification_Tree_Ensemble.pdf" download="L07-Classification_Tree_Ensemble.pdf">L07 Classification Tree Ensemble (pdf)</a>
 - <a href="/lecture/L07-Unsupervised_learning.pdf" download="L07-Unsupervised_learning.pdf">L07 Unsupervised Learning (pdf)</a>
+- <a href="/lecture/Bagging_tree.ipynb" download="Bagging_tree.ipynb">Bagging Tree (ipynb)</a>
+- <a href="/lecture/Boosting_tree.ipynb" download="Boosting_tree.ipynb">Boosting Tree (ipynb)</a>
+- <a href="/lecture/CART.ipynb" download="CART.ipynb">CART (ipynb)</a>
+- <a href="/lecture/OOB.ipynb" download="OOB.ipynb">OOB (ipynb)</a>
+- <a href="/lecture/Random_Forest_Classification.ipynb" download="Random_Forest_Classification.ipynb">Random Forest Classification (ipynb)</a>
 
 ### Week 2 Lecture 8 (7/15)
 - <a href="/lecture/L08-Model_Validation.pdf" download="L08-Model_Validation.pdf">L08 Model Validation (pdf)</a>
