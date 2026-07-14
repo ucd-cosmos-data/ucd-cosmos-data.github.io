@@ -1,7 +1,7 @@
 ---
-title: "Lab08: Regression"
+title: "Lab08: Dataset Assignment"
 author: "Wonjun Seo"
-summary: ".."
+summary: "Dataset Assignment"
 draft: true
 ---
-dd
+## [Dataset Assignment](https://app.excalidraw.com/l/ANjfLU4ltgx/3PYBrpMEjxx)
