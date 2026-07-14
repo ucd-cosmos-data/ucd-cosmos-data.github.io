@@ -4,7 +4,7 @@ author: "Wonjun Seo"
 summary: "Linear Regression and Mini Project 2"
 ---
 ## MAT
-Details on linear regression and principal component analysis (PCA).
+Details on linear regression.
 
 ## Mini Project 2!
 
