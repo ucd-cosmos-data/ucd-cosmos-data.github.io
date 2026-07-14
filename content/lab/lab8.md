@@ -1,5 +1,5 @@
 ---
-title: "Lab08: Dataset Assignment"
+title: "Lab08"
 author: "Wonjun Seo"
 summary: "Dataset Assignment"
 draft: true

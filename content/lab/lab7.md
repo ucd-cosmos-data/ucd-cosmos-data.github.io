@@ -1,14 +1,13 @@
 ---
-title: "Lab07: Linear Regression and PCA"
+title: "Lab07"
 author: "Wonjun Seo"
-summary: ".."
+summary: "Linear Regression, PCA, and Mini Project 2"
 draft: true
 ---
 ## MATH!
 Details on linear regression and principal component analysis (PCA).
 
 ## Mini Project 2!
-> A written report only. No presentation.
 
 ### Goal
 In this mini project, your group will divide California into a small number of **real-estate market regions**: areas that are both geographically contiguous and similar in price. The chosen method is **$K$-means clustering**, run on the California Housing dataset using only three features: **longitude, latitude, and median house value**. 
@@ -41,13 +40,11 @@ Your report should contain:
    - Describe the algorithm to solve the minimization problem.
    - Identify the hyperparameters and explain how you choose them.
    - Explain why scaling is required.
-    > You may use Codex for this, but please review it carefully and make sure you fully understand it.
+    > You may use Codex for this, but do not copy and paste directly. **Please review it carefully, make sure you fully understand it, and write in your words**.
 
 2. **Results (figure) and interpretation**
    - Produce a final map: a **scatter plot** with **longitude on the x-axis, latitude on the y-axis, and points colored by cluster**.
    - Report each region's mean price.
    - Interpret the resulting regions.
-3. **Code**
-   - Include your full, runnable code in an appendix.
-
-4. **(Optional) Try other clustering method and compare the results**
+3. **Code**: Include your full, runnable code in an **appendix**. No code chunk in main body of the report.
+4. **(Optional) Try other clustering methods and compare the results**.
