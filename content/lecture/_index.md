@@ -76,6 +76,7 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/cosmos_dataset_zoo_student_videos_siena_v18.pdf" download="cosmos_dataset_zoo_student_videos_siena_v18.pdf">Group Project Datasets (pdf)</a>
 
 ### Week 2 Lecture 6 (7/13)
+- <a href="/lecture/Prediction.pdf" download="Prediction.pdf">Lecture 6: Prediction (pdf)</a>
 - <a href="/lecture/AdaBoost_Regression.ipynb" download="AdaBoost_Regression.ipynb">AdaBoost Regression (ipynb)</a>
 - <a href="/lecture/Bagging_Regressor.ipynb" download="Bagging_Regressor.ipynb">Bagging Regressor (ipynb)</a>
 - <a href="/lecture/Decision_Tree_Regression.ipynb" download="Decision_Tree_Regression.ipynb">Decision Tree Regression (ipynb)</a>
@@ -94,6 +95,7 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/Stacking_Regressor.ipynb" download="Stacking_Regressor.ipynb">Stacking Regressor (ipynb)</a>
 
 ### Week 2 Lecture 7 (7/14)
+
 - <a href="/lecture/L07-Classification_Tree_Ensemble.pdf" download="L07-Classification_Tree_Ensemble.pdf">L07 Classification Tree Ensemble (pdf)</a>
 - <a href="/lecture/Bagging_tree.ipynb" download="Bagging_tree.ipynb">Bagging Tree (ipynb)</a>
 - <a href="/lecture/Boosting_tree.ipynb" download="Boosting_tree.ipynb">Boosting Tree (ipynb)</a>
