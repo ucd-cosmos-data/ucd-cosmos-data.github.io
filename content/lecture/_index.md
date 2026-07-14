@@ -115,6 +115,9 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 
 ### Week 2 Lecture 8 (7/15)
 - <a href="/lecture/L08-Model_Validation.pdf" download="L08-Model_Validation.pdf">L08 Model Validation (pdf)</a>
+- <a href="/lecture/Bias_variance.ipynb" download="Bias_variance.ipynb">Bias Variance (ipynb)</a>
+- <a href="/lecture/Cross_validation.ipynb" download="Cross_validation.ipynb">Cross Validation (ipynb)</a>
+- <a href="/lecture/Split_sample_validation.ipynb" download="Split_sample_validation.ipynb">Split Sample Validation (ipynb)</a>
 
 ### Week 2 Lecture 9 (7/16)
 - <a href="/lecture/L09-Neural_Nets_I.pdf" download="L09-Neural_Nets_I.pdf">L09 Neural Nets I (pdf)</a>
