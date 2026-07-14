@@ -1,9 +1,9 @@
 ---
 title: "Lab07"
 author: "Wonjun Seo"
-summary: "Linear Regression, PCA, and Mini Project 2"
+summary: "Linear Regression and Mini Project 2"
 ---
-## MATH!
+## MAT
 Details on linear regression and principal component analysis (PCA).
 
 ## Mini Project 2!
