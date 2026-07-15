@@ -10,20 +10,20 @@ During the final week of the program, each group will analyze their assigned dat
 
 ## [The Deep Learners](https://ucd-cosmos-data.github.io/26-the-deep-learners/)
 - Members: Rachel Castillo, William Liu, Vincent Lu, Warren Su, Michael Tang
-- Dataset:
+- Dataset: Copenhagen Networks
 
 ## [The Optimizers](https://ucd-cosmos-data.github.io/26-the-optimizers/)
 - Members: Advait Ghosh, Ashley Hu, Sahil Qureshi, Shreyas Reddy, Sonia Shin
-- Dataset:
+- Dataset: Siena Scalp EEG
 
 ## [The Data Miners](https://ucd-cosmos-data.github.io/26-the-data-miners/)
 - Members: Samarth Gaggar, Ridhima Kapoor, Anirudh Nanniyur, Yuchen Wang
-- Dataset:
+- Dataset: Dreyer2023 BCI
 
 ## [The Backpropagators](https://ucd-cosmos-data.github.io/26-the-backpropagators/)
 - Members: Shely Jain, Ema Kaludjerovic, Brian Qian, Liam Wagner
-- Dataset:
+- Dataset: PBMC3K (Single-cell RNA-seq)
 
 ## [The Pattern Seekers](https://ucd-cosmos-data.github.io/26-the-pattern-seekers/)
 - Members: Pranav Elaprolu, Jerry Li, Advay Mandalia, Brendan Park
-- Dataset:
+- Dataset: StatBomb 2022 World Cup
