@@ -1,7 +1,10 @@
 ---
-title: "Lab09: Classification & Quiz 2"
+title: "Lab09"
 author: "Wonjun Seo"
-summary: ".."
-draft: true
+summary: "PCA and Quiz 2"
 ---
-dd
+## MATH!
+Details on linear regression.
+
+## Quiz 2 Solutions
+- <a href="/files/quiz2_soln.pdf" download="quiz2_soln.pdf">Quiz 1 Solutions</a>

@@ -3,7 +3,7 @@ title: "Lab07"
 author: "Wonjun Seo"
 summary: "Linear Regression and Mini Project 2"
 ---
-## MAT
+## MATH!
 Details on linear regression.
 
 ## Mini Project 2!

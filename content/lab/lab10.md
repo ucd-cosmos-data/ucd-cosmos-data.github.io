@@ -1,7 +1,7 @@
 ---
-title: "Lab10: Optimization"
+title: "Lab10"
 author: "Wonjun Seo"
-summary: ".."
+summary: "Optimization"
 draft: true
 ---
 dd

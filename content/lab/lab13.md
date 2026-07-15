@@ -1,7 +1,6 @@
 ---
-title: "Lab13: Quiz 3"
+title: "Lab13"
 author: "Wonjun Seo"
-summary: ".."
+summary: "Quiz 3"
 draft: true
 ---
-dd

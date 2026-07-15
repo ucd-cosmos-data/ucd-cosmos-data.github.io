@@ -1,7 +1,7 @@
 ---
-title: "Lab12: Pytorch II"
+title: "Lab12"
 author: "Wonjun Seo"
-summary: ".."
+summary: "Pytorch II"
 draft: true
 ---
 dd
