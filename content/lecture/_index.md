@@ -124,6 +124,7 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 
 
 ### Week 2 Lecture 10 (7/17)
+- <a href="/lecture/dataset_links.pdf" download="dataset_links.pdf">Dataset links (pdf)</a>
 - <a href="/lecture/L10-Neural_Nets_I.pdf" download="L10-Neural_Nets_I.pdf">L10 Neural Nets I (pdf)</a>
 - <a href="/lecture/L10-Neural_Nets_II.pdf" download="L10-Neural_Nets_II.pdf">L10 Neural Nets II (pdf)</a>
 - <a href="/lecture/L10-Neural_Nets_III.pdf" download="L10-Neural_Nets_III.pdf">L10 Neural Nets III (pdf)</a>
