@@ -134,12 +134,16 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/Transformer_Overview_Example.ipynb" download="Transformer_Overview_Example.ipynb">Transformer Overview Example (ipynb)</a>
 
 ### Week 3 Lecture 12 (7/21)
+
+### Week 3 Lecture 13 (7/22)
 - <a href="/lecture/L11-Bayesian_Analysis.pdf" download="L11-Bayesian_Analysis.pdf">L11 Bayesian Analysis (pdf)</a>
 - <a href="/lecture/L12-Statistical_Inference.pdf" download="L12-Statistical_Inference.pdf">L12 Statistical Inference (pdf)</a>
 
-### Week 3 Lecture 13 (7/21)
+### Week 3 Lecture 14 (7/23)
 - <a href="/lecture/L13-Causal_Inference.pdf" download="L13-Causal_Inference.pdf">L13 Causal Inference (pdf)</a>
 - <a href="/lecture/L13-Ethics.pdf" download="L13-Ethics.pdf">L13 Ethics (pdf)</a>
+
+### Week 3 Lecture 15 (7/23)
 
 
 
