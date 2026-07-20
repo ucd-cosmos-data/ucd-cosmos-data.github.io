@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gradient descent (1D)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F6F5; --ink:#10202B; --muted:#5C6B72;
+    --grid:#E1E6E4; --line:#CBD3D1;
+    --curve:#1D4E89; --ball:#D64550; --min:#1B9C7E;
+    --warn:#C9871E; --card:#FBFCFB;
+    --disp:'Space Grotesk',system-ui,sans-serif;
+    --body:system-ui,-apple-system,'Segoe UI',sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); line-height:1.55; -webkit-font-smoothing:antialiased}
+  .wrap{max-width:940px; margin:0 auto; padding:32px 20px 56px}
+  header{margin-bottom:24px}
+  .eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--ball); margin:0 0 6px}
+  h1{font-family:var(--disp); font-weight:600; font-size:34px; letter-spacing:-.02em; margin:0 0 8px; line-height:1.05}
+  h1 span{color:var(--muted); font-weight:400}
+  .lede{color:var(--muted); font-size:15px; max-width:64ch; margin:0}
+
+  .grid{display:grid; grid-template-columns:1.55fr 1fr; gap:18px; align-items:start}
+  @media(max-width:720px){ .grid{grid-template-columns:1fr} }
+
+  .plot-card{background:var(--card); border:0.5px solid var(--line); border-radius:14px; padding:14px; overflow:hidden}
+  svg{display:block; width:100%; height:auto}
+
+  .panel{display:flex; flex-direction:column; gap:14px}
+  .block{background:var(--card); border:0.5px solid var(--line); border-radius:14px; padding:16px}
+  .block h2{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:500; margin:0 0 12px}
+  .fx-current{font-family:var(--mono); font-size:19px; color:var(--curve); margin:0 0 2px; font-weight:500}
+  .fx-note{font-size:12.5px; color:var(--muted); margin:0 0 8px}
+  label.small{font-size:12px; color:var(--muted); display:block; margin-bottom:4px}
+
+  select,input[type=number]{font-family:var(--mono); font-size:14px; color:var(--ink); background:var(--paper); border:0.5px solid var(--line); border-radius:8px; padding:8px 10px; width:100%}
+  .x0{margin-top:10px}
+  input[type=number]:focus,select:focus{outline:2px solid var(--curve); outline-offset:1px}
+
+  .eta-head{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:6px}
+  .eta-head .lab{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+  .eta-val{font-family:var(--mono); font-size:26px; font-weight:600; color:var(--ball)}
+  .eta-val::before{content:"η = "; font-size:15px; color:var(--muted); font-weight:400}
+  input[type=range]{width:100%; accent-color:var(--ball)}
+  .eta-scale{display:flex; justify-content:space-between; font-family:var(--mono); font-size:10.5px; color:var(--muted); margin-top:4px}
+
+  .msg{font-size:12.5px; margin-top:10px; min-height:1.2em; color:var(--muted); font-family:var(--mono)}
+  .msg.ok{color:var(--min)} .msg.bad{color:var(--ball)}
+
+  .controls{display:flex; gap:8px; flex-wrap:wrap}
+  button{font-family:var(--disp); font-size:14px; font-weight:500; color:var(--ink); background:var(--paper); border:0.5px solid var(--line); border-radius:9px; padding:9px 14px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; transition:background .12s,transform .06s}
+  button:hover{background:#EAEEEC} button:active{transform:scale(.97)}
+  button.primary{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+  button.primary:hover{background:#233541}
+  button:disabled{opacity:.4; cursor:not-allowed}
+
+  .speed{display:flex; align-items:center; gap:10px; margin-top:10px}
+  .speed label{font-size:12px; color:var(--muted); min-width:44px}
+  .speed input{accent-color:var(--curve)}
+
+  .stats{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+  .stat{background:var(--paper); border-radius:9px; padding:10px 12px}
+  .stat .k{font-size:11px; color:var(--muted); font-family:var(--mono); letter-spacing:.06em}
+  .stat .v{font-family:var(--mono); font-size:17px; font-weight:500; margin-top:3px}
+  .stat .v.keep{color:var(--min)} .stat .v.bad{color:var(--ball)}
+
+  .log-card{margin-top:18px}
+  table{width:100%; border-collapse:collapse; font-family:var(--mono); font-size:12.5px}
+  th,td{text-align:right; padding:7px 8px; border-bottom:0.5px solid var(--grid)}
+  th{color:var(--muted); font-weight:500; font-size:11px; letter-spacing:.05em; text-transform:uppercase}
+  th:first-child,td:first-child{text-align:center; color:var(--muted)}
+  td.step{color:var(--ball)}
+  tbody tr:last-child td{font-weight:500}
+  tbody tr.converged td{color:var(--min)}
+  .tbl-scroll{max-height:260px; overflow:auto}
+
+  .hint{font-size:12px; color:var(--muted); margin-top:12px; font-family:var(--mono)}
+  @media(prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">optimization · 1d convex</p>
+    <h1>Gradient descent <span>· rolling into the bowl</span></h1>
+    <p class="lede">Each step moves downhill against the slope: xₙ₊₁ = xₙ − η·f′(xₙ). The whole story lives in the step size η — too small and it crawls, too large and it overshoots or diverges. Drag the η slider and watch the ball roll.</p>
+  </header>
+
+  <div class="grid">
+    <div class="plot-card">
+      <svg id="svg" viewBox="0 0 600 400" role="img" aria-label="Gradient descent steps rolling down a convex curve">
+        <defs>
+          <clipPath id="pclip"><rect x="46" y="18" width="538" height="348"/></clipPath>
+          <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M1 1L8 5L1 9" fill="none" stroke="var(--ball)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <g id="static"></g>
+        <g id="dynamic"></g>
+      </svg>
+    </div>
+
+    <div class="panel">
+      <div class="block">
+        <div class="eta-head"><span class="lab">learning rate</span><span class="eta-val" id="etaVal">0.30</span></div>
+        <input id="eta" type="range" min="0.02" max="1.20" value="0.30" step="0.01">
+        <div class="eta-scale"><span>0.02</span><span>tiny · steady · overshoot · diverge</span><span>1.20</span></div>
+      </div>
+
+      <div class="block">
+        <h2>Function &amp; start</h2>
+        <p class="fx-current" id="fxLabel">f(x) = x²</p>
+        <p class="fx-note" id="fxNote"></p>
+        <label class="small" for="fnSel">Function</label>
+        <select id="fnSel"></select>
+        <div class="x0"><label class="small" for="x0In">start x₀</label><input id="x0In" type="number" step="0.1"></div>
+        <p class="msg" id="msg"></p>
+      </div>
+
+      <div class="block">
+        <h2>Run</h2>
+        <div class="controls">
+          <button class="primary" id="playBtn"><span id="playIcon">▶</span> <span id="playTxt">Play</span></button>
+          <button id="stepBtn">Step →</button>
+          <button id="resetBtn">↺ Reset</button>
+        </div>
+        <div class="speed"><label>Speed</label><input id="speed" type="range" min="180" max="1400" value="720" step="20"></div>
+        <p class="hint">Shortcuts: space = play/pause · → = step</p>
+      </div>
+
+      <div class="block">
+        <h2>Current state</h2>
+        <div class="stats">
+          <div class="stat"><div class="k">iteration n</div><div class="v" id="stN">0</div></div>
+          <div class="stat"><div class="k">position xₙ</div><div class="v" id="stX">—</div></div>
+          <div class="stat"><div class="k">f(xₙ)</div><div class="v" id="stFx">—</div></div>
+          <div class="stat"><div class="k">slope f′(xₙ)</div><div class="v" id="stG">—</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block log-card">
+    <h2>Iteration log</h2>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>n</th><th>xₙ</th><th>f(xₙ)</th><th>f′(xₙ)</th><th>−η·f′</th><th>xₙ₊₁</th></tr></thead>
+        <tbody id="logBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var FUNCS = [
+    {label:"x²", f:function(x){return x*x;}, fp:function(x){return 2*x;}, min:0,
+     x0:3.4, view:[-4.4,4.4], note:"Overshoots above η = 0.5, diverges above η = 1. The clean regime demo."},
+    {label:"¼·x⁴", f:function(x){return 0.25*x*x*x*x;}, fp:function(x){return x*x*x;}, min:0,
+     x0:2.2, view:[-2.9,2.9], note:"Flat bottom — the slope vanishes near the min, so GD slows to a crawl."},
+    {label:"cosh(x) − 1", f:function(x){return Math.cosh(x)-1;}, fp:function(x){return Math.sinh(x);}, min:0,
+     x0:1.7, view:[-3,3], note:"Steep walls mean big slopes — a large η overshoots fast."},
+    {label:"½·(x − 2)²", f:function(x){return 0.5*(x-2)*(x-2);}, fp:function(x){return x-2;}, min:2,
+     x0:-0.6, view:[-1.5,5.5], note:"Minimum at x = 2, not 0. Gentle curvature (diverges only above η = 2)."}
+  ];
+  var TOL=1e-8, MAXIT=50, DIVERGE=1e6;
+
+  var $=function(id){return document.getElementById(id);};
+  var svgStatic=$('static'), svgDyn=$('dynamic');
+  var reduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  var M={l:46,r:16,t:18,b:34}, W=600, H=400;
+  var PL=M.l, PR=W-M.r, PT=M.t, PB=H-M.b, PW=PR-PL, PH=PB-PT;
+  var view={xmin:0,xmax:1,ymin:-1,ymax:1};
+  var state={}, playing=false, timer=null, token=0;
+
+  function fmt(v,d){
+    if(!isFinite(v)) return "—";
+    var a=Math.abs(v);
+    if(a!==0 && (a>=1e5 || a<1e-4)) return v.toExponential(3);
+    return v.toFixed(d===undefined?5:d);
+  }
+  function SX(x){ return PL+(x-view.xmin)/(view.xmax-view.xmin)*PW; }
+  function SY(y){ return PB-(y-view.ymin)/(view.ymax-view.ymin)*PH; }
+  function cx(p){ return Math.max(PL,Math.min(PR,p)); }
+  function cy(p){ return Math.max(PT,Math.min(PB,p)); }
+  function niceStep(r){ var raw=r/6,mag=Math.pow(10,Math.floor(Math.log10(raw))),n=raw/mag; return (n<1.5?1:n<3?2:n<7?5:10)*mag; }
+
+  function setupView(fn){
+    view.xmin=fn.view[0]; view.xmax=fn.view[1];
+    var lo=Infinity,hi=-Infinity;
+    for(var i=0;i<=240;i++){ var x=view.xmin+(view.xmax-view.xmin)*i/240,y=fn.f(x); if(isFinite(y)){if(y<lo)lo=y;if(y>hi)hi=y;} }
+    if(lo>0)lo=0; if(hi<0)hi=0;
+    var m=0.14*(hi-lo||1); view.ymin=lo-m; view.ymax=hi+m;
+  }
+
+  function buildStatic(fn){
+    var s='', xs=niceStep(view.xmax-view.xmin), ys=niceStep(view.ymax-view.ymin);
+    for(var gx=Math.ceil(view.xmin/xs)*xs; gx<=view.xmax+1e-9; gx+=xs){
+      var X=SX(gx);
+      s+='<line x1="'+X.toFixed(1)+'" y1="'+PT+'" x2="'+X.toFixed(1)+'" y2="'+PB+'" stroke="var(--grid)" stroke-width="1"/>';
+      s+='<text x="'+X.toFixed(1)+'" y="'+(PB+16)+'" fill="var(--muted)" font-size="10" font-family="var(--mono)" text-anchor="middle">'+(+gx.toFixed(2))+'</text>';
+    }
+    for(var gy=Math.ceil(view.ymin/ys)*ys; gy<=view.ymax+1e-9; gy+=ys){
+      var Y=SY(gy);
+      s+='<line x1="'+PL+'" y1="'+Y.toFixed(1)+'" x2="'+PR+'" y2="'+Y.toFixed(1)+'" stroke="var(--grid)" stroke-width="1"/>';
+      s+='<text x="'+(PL-6)+'" y="'+(Y+3).toFixed(1)+'" fill="var(--muted)" font-size="10" font-family="var(--mono)" text-anchor="end">'+(+gy.toFixed(2))+'</text>';
+    }
+    var Y0=SY(0);
+    s+='<line x1="'+PL+'" y1="'+Y0.toFixed(1)+'" x2="'+PR+'" y2="'+Y0.toFixed(1)+'" stroke="var(--line)" stroke-width="1.5"/>';
+    var pts='';
+    for(var i=0;i<=360;i++){ var x=view.xmin+(view.xmax-view.xmin)*i/360,y=fn.f(x); if(isFinite(y)) pts+=SX(x).toFixed(1)+','+Math.max(PT-60,Math.min(PB+60,SY(y))).toFixed(1)+' '; }
+    s+='<polyline points="'+pts.trim()+'" fill="none" stroke="var(--curve)" stroke-width="2.4" stroke-linejoin="round" clip-path="url(#pclip)"/>';
+    svgStatic.innerHTML=s;
+  }
+
+  function elMin(){
+    var mx=state.fn.min, my=state.fn.f(mx), X=SX(mx), Y=SY(my), Y0=SY(0);
+    return '<line x1="'+X.toFixed(1)+'" y1="'+Y.toFixed(1)+'" x2="'+X.toFixed(1)+'" y2="'+Y0.toFixed(1)+'" stroke="var(--min)" stroke-width="1" stroke-dasharray="2 3" opacity="0.7"/>'
+      +'<circle cx="'+X.toFixed(1)+'" cy="'+Y.toFixed(1)+'" r="4" fill="none" stroke="var(--min)" stroke-width="1.6"/>'
+      +'<text x="'+X.toFixed(1)+'" y="'+(Y-9).toFixed(1)+'" fill="var(--min)" font-size="11" font-family="var(--mono)" text-anchor="middle">min</text>';
+  }
+  function elPoint(xn,label){
+    var f=state.fn.f(xn), X=SX(xn), Yc=SY(f), Y0=SY(0);
+    var s='<line x1="'+cx(X).toFixed(1)+'" y1="'+cy(Y0).toFixed(1)+'" x2="'+cx(X).toFixed(1)+'" y2="'+cy(Yc).toFixed(1)+'" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>';
+    s+='<circle cx="'+cx(X).toFixed(1)+'" cy="'+cy(Yc).toFixed(1)+'" r="6" fill="var(--ball)"/>';
+    s+='<circle cx="'+cx(X).toFixed(1)+'" cy="'+Y0.toFixed(1)+'" r="3" fill="var(--ink)"/>';
+    if(label) s+='<text x="'+cx(X).toFixed(1)+'" y="'+(Y0+15).toFixed(1)+'" fill="var(--ink)" font-size="11" font-family="var(--mono)" text-anchor="middle">'+label+'</text>';
+    return s;
+  }
+  function elTangent(xn,op){
+    var f=state.fn.f(xn), fp=state.fn.fp(xn), d=(view.xmax-view.xmin)*0.10;
+    var x1=xn-d, x2=xn+d, y1=f+fp*(x1-xn), y2=f+fp*(x2-xn);
+    return '<line x1="'+SX(x1).toFixed(1)+'" y1="'+SY(y1).toFixed(1)+'" x2="'+SX(x2).toFixed(1)+'" y2="'+SY(y2).toFixed(1)+'" stroke="var(--ink)" stroke-width="1.6" opacity="'+op.toFixed(2)+'" clip-path="url(#pclip)"/>';
+  }
+  function elArrow(xn,xnext,op){
+    var ya=cy(SY(0)+16);
+    var x1=cx(SX(xn)), x2=cx(SX(xnext));
+    if(Math.abs(x2-x1)<1.5) return '';
+    return '<line x1="'+x1.toFixed(1)+'" y1="'+ya.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+ya.toFixed(1)+'" stroke="var(--ball)" stroke-width="1.8" opacity="'+op.toFixed(2)+'" marker-end="url(#ah)"/>';
+  }
+  function elBall(x){
+    return '<circle cx="'+cx(SX(x)).toFixed(1)+'" cy="'+cy(SY(state.fn.f(x))).toFixed(1)+'" r="6" fill="var(--ball)"/>';
+  }
+
+  function tween(dur,onUpdate,onDone){
+    if(reduced){ onUpdate(1); if(onDone)onDone(); return; }
+    var start=null,tk=token;
+    function frame(ts){ if(tk!==token)return; if(!start)start=ts; var p=Math.min(1,(ts-start)/dur); onUpdate(p); if(p<1)requestAnimationFrame(frame); else if(onDone)onDone(); }
+    requestAnimationFrame(frame);
+  }
+
+  function updateStats(){
+    $('stN').textContent=state.n;
+    $('stX').textContent=fmt(state.x);
+    $('stFx').textContent=fmt(state.fn.f(state.x));
+    $('stG').textContent=fmt(state.fn.fp(state.x));
+    var xv=$('stX'),fv=$('stFx');
+    xv.className='v'+(state.done&&state.converged?' keep':state.diverged?' bad':'');
+    fv.className='v'+(state.done&&state.converged?' keep':'');
+  }
+  function addLogRow(n,xn,f,fp,step,xnext,conv){
+    var tr=document.createElement('tr'); if(conv)tr.className='converged';
+    tr.innerHTML='<td>'+n+'</td><td>'+fmt(xn)+'</td><td>'+fmt(f)+'</td><td>'+fmt(fp)+'</td><td class="step">'+fmt(step)+'</td><td>'+fmt(xnext)+'</td>';
+    $('logBody').appendChild(tr); tr.scrollIntoView({block:'nearest'});
+  }
+
+  function doStep(cb){
+    if(state.done){ if(cb)cb(); return; }
+    var xn=state.x, f=state.fn.f(xn), fp=state.fn.fp(xn);
+    var step=-state.eta*fp, xnext=xn+step;
+    state.n++;
+    var diverged=Math.abs(xnext)>DIVERGE || !isFinite(xnext);
+    var conv=(Math.abs(step)<=TOL*(1+Math.abs(xnext))) || Math.abs(state.fn.fp(xnext))<TOL;
+    var done=conv||diverged||state.n>=MAXIT;
+
+    svgDyn.innerHTML=elMin()+elPoint(xn,'x'+(state.n-1))+elTangent(xn,0)+elArrow(xn,xnext,0);
+    tween(Math.max(120,state.speed*0.30), function(p){
+      svgDyn.innerHTML=elMin()+elPoint(xn,'x'+(state.n-1))+elTangent(xn,0.9*p)+elArrow(xn,xnext,0.9*p);
+    }, function(){
+      setTimeout(function(){
+        var tk=token;
+        tween(Math.max(160,state.speed*0.55), function(p){
+          var x=xn+(xnext-xn)*p;
+          svgDyn.innerHTML=elMin()+elArrow(xn,xnext,0.3)+elTangent(xn,0.25)+elBall(x);
+        }, function(){
+          if(tk!==token) return;
+          state.x=xnext; state.done=done; state.converged=conv; state.diverged=diverged;
+          svgDyn.innerHTML=elMin()+elPoint(xnext,'x'+state.n);
+          updateStats(); addLogRow(state.n,xn,f,fp,step,xnext,conv);
+          if(done) finish(conv,diverged);
+          if(cb) cb();
+        });
+      }, reduced?0:Math.max(90,state.speed*0.18));
+    });
+  }
+
+  function finish(conv,diverged){
+    stopPlay();
+    if(conv){ $('msg').textContent='Converged · x* ≈ '+fmt(state.x); $('msg').className='msg ok'; }
+    else if(diverged){ $('msg').textContent='Diverging — η is too large for this curve.'; $('msg').className='msg bad'; }
+    else{ $('msg').textContent='Still descending after '+MAXIT+' steps (slow — try a larger η).'; $('msg').className='msg'; }
+    $('stepBtn').disabled=true; $('playBtn').disabled=true;
+  }
+
+  function stopPlay(){ playing=false; if(timer){clearTimeout(timer);timer=null;} $('playIcon').textContent='▶'; $('playTxt').textContent='Play'; }
+  function loop(){ if(!playing||state.done){stopPlay();return;} doStep(function(){ if(playing&&!state.done) timer=setTimeout(loop,Math.max(60,state.speed*0.16)); else stopPlay(); }); }
+  function togglePlay(){ if(state.done)return; if(playing)stopPlay(); else{ playing=true; $('playIcon').textContent='❚❚'; $('playTxt').textContent='Pause'; loop(); } }
+
+  function reset(keepInput){
+    token++; stopPlay();
+    var fn=state.fn;
+    var x0=keepInput?parseFloat($('x0In').value):fn.x0;
+    if(!isFinite(x0)) x0=fn.x0;
+    $('x0In').value=x0;
+    state.eta=parseFloat($('eta').value);
+    $('logBody').innerHTML='';
+    $('stepBtn').disabled=false; $('playBtn').disabled=false;
+    state.x=x0; state.n=0; state.done=false; state.converged=false; state.diverged=false;
+    setupView(fn); buildStatic(fn); svgDyn.innerHTML=elMin()+elPoint(x0,'x0'); updateStats();
+    $('msg').textContent='Ready · η = '+state.eta.toFixed(2)+', start x₀ = '+fmt(x0,3)+'.'; $('msg').className='msg';
+  }
+
+  function loadFn(idx){
+    state.fn=FUNCS[idx]; state.speed=1580-parseInt($('speed').value);
+    $('fxLabel').textContent='f(x) = '+FUNCS[idx].label;
+    $('fxNote').textContent=FUNCS[idx].note;
+    reset(false);
+  }
+
+  var sel=$('fnSel');
+  FUNCS.forEach(function(fn,i){ var o=document.createElement('option'); o.value=i; o.textContent='f(x) = '+fn.label; sel.appendChild(o); });
+  sel.addEventListener('change',function(){ loadFn(+sel.value); });
+  $('x0In').addEventListener('change',function(){ reset(true); });
+  $('eta').addEventListener('input',function(){ $('etaVal').textContent=parseFloat($('eta').value).toFixed(2); reset(true); });
+  $('speed').addEventListener('input',function(){ state.speed=1580-parseInt($('speed').value); });
+  $('stepBtn').addEventListener('click',function(){ if(!playing) doStep(); });
+  $('playBtn').addEventListener('click',togglePlay);
+  $('resetBtn').addEventListener('click',function(){ reset(false); });
+  document.addEventListener('keydown',function(e){
+    if(e.code==='Space'){ e.preventDefault(); togglePlay(); }
+    else if(e.code==='ArrowRight'){ e.preventDefault(); if(!playing) doStep(); }
+  });
+
+  $('etaVal').textContent=parseFloat($('eta').value).toFixed(2);
+  loadFn(0);
+})();
+</script>
+</body>
+</html>

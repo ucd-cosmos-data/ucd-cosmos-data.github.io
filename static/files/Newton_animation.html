@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newton's method</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F6F5; --ink:#10202B; --muted:#5C6B72;
+    --grid:#E1E6E4; --line:#CBD3D1;
+    --curve:#1D4E89; --tangent:#D64550; --tan-soft:#E88A90;
+    --keep:#1B9C7E; --warn:#C9871E; --card:#FBFCFB;
+    --disp:'Space Grotesk',system-ui,sans-serif;
+    --body:system-ui,-apple-system,'Segoe UI',sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--body); line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:940px; margin:0 auto; padding:32px 20px 56px}
+  header{margin-bottom:24px}
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--tangent); margin:0 0 6px;
+  }
+  h1{
+    font-family:var(--disp); font-weight:600; font-size:34px;
+    letter-spacing:-.02em; margin:0 0 8px; line-height:1.05;
+  }
+  h1 span{color:var(--muted); font-weight:400}
+  .lede{color:var(--muted); font-size:15px; max-width:64ch; margin:0}
+
+  .grid{display:grid; grid-template-columns:1.55fr 1fr; gap:18px; align-items:start}
+  @media(max-width:720px){ .grid{grid-template-columns:1fr} }
+
+  .plot-card{
+    background:var(--card); border:0.5px solid var(--line);
+    border-radius:14px; padding:14px; overflow:hidden;
+  }
+  svg{display:block; width:100%; height:auto}
+
+  .panel{display:flex; flex-direction:column; gap:14px}
+  .block{
+    background:var(--card); border:0.5px solid var(--line);
+    border-radius:14px; padding:16px;
+  }
+  .block h2{
+    font-family:var(--mono); font-size:11px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--muted); font-weight:500; margin:0 0 12px;
+  }
+  .fx-current{
+    font-family:var(--mono); font-size:19px; color:var(--curve); margin:0 0 2px; font-weight:500;
+  }
+  .fx-note{font-size:12.5px; color:var(--muted); margin:0 0 8px}
+  label.small{font-size:12px; color:var(--muted); display:block; margin-bottom:4px}
+
+  select,input[type=number]{
+    font-family:var(--mono); font-size:14px; color:var(--ink);
+    background:var(--paper); border:0.5px solid var(--line);
+    border-radius:8px; padding:8px 10px; width:100%;
+  }
+  .x0{margin-top:10px}
+  input[type=number]:focus,select:focus{outline:2px solid var(--curve); outline-offset:1px}
+
+  .msg{font-size:12.5px; margin-top:10px; min-height:1.2em; color:var(--muted); font-family:var(--mono)}
+  .msg.ok{color:var(--keep)}
+  .msg.bad{color:var(--tangent)}
+
+  .controls{display:flex; gap:8px; flex-wrap:wrap}
+  button{
+    font-family:var(--disp); font-size:14px; font-weight:500; color:var(--ink);
+    background:var(--paper); border:0.5px solid var(--line);
+    border-radius:9px; padding:9px 14px; cursor:pointer;
+    display:inline-flex; align-items:center; gap:6px; transition:background .12s,transform .06s;
+  }
+  button:hover{background:#EAEEEC}
+  button:active{transform:scale(.97)}
+  button.primary{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+  button.primary:hover{background:#233541}
+  button:disabled{opacity:.4; cursor:not-allowed}
+
+  .speed{display:flex; align-items:center; gap:10px; margin-top:6px}
+  .speed label{font-size:12px; color:var(--muted); min-width:44px}
+  input[type=range]{flex:1; accent-color:var(--curve)}
+
+  .stats{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+  .stat{background:var(--paper); border-radius:9px; padding:10px 12px}
+  .stat .k{font-size:11px; color:var(--muted); font-family:var(--mono); letter-spacing:.06em}
+  .stat .v{font-family:var(--mono); font-size:17px; font-weight:500; margin-top:3px}
+  .stat .v.keep{color:var(--keep)}
+  .stat .v.bad{color:var(--tangent)}
+
+  .log-card{margin-top:18px}
+  table{width:100%; border-collapse:collapse; font-family:var(--mono); font-size:12.5px}
+  th,td{text-align:right; padding:7px 8px; border-bottom:0.5px solid var(--grid)}
+  th{color:var(--muted); font-weight:500; font-size:11px; letter-spacing:.05em; text-transform:uppercase}
+  th:first-child,td:first-child{text-align:center; color:var(--muted)}
+  td.dx{color:var(--tangent)}
+  tbody tr:last-child td{font-weight:500}
+  tbody tr.converged td{color:var(--keep)}
+  .tbl-scroll{max-height:260px; overflow:auto}
+
+  .hint{font-size:12px; color:var(--muted); margin-top:14px; font-family:var(--mono)}
+  @media(prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">numerical root-finding</p>
+    <h1>Newton's method <span>· sliding down the tangent</span></h1>
+    <p class="lede">Replace the curve near xₙ with its <b>tangent line</b> and jump to where that line hits zero: xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ). Watch the red dot slide down each tangent to the x-axis. Fast when it works — but pick a bad start and it cycles or flies off.</p>
+  </header>
+
+  <div class="grid">
+    <div class="plot-card">
+      <svg id="svg" viewBox="0 0 600 400" role="img" aria-label="Graph showing Newton tangent steps toward a root">
+        <defs><clipPath id="pclip"><rect x="46" y="18" width="538" height="348"/></clipPath></defs>
+        <g id="static"></g>
+        <g id="dynamic"></g>
+      </svg>
+    </div>
+
+    <div class="panel">
+      <div class="block">
+        <h2>Function &amp; start point</h2>
+        <p class="fx-current" id="fxLabel">f(x) = x² − 2</p>
+        <p class="fx-note" id="fxNote"></p>
+        <label class="small" for="fnSel">Function</label>
+        <select id="fnSel"></select>
+        <div class="x0"><label class="small" for="x0In">start x₀</label><input id="x0In" type="number" step="0.1"></div>
+        <p class="msg" id="msg"></p>
+      </div>
+
+      <div class="block">
+        <h2>Run</h2>
+        <div class="controls">
+          <button class="primary" id="playBtn"><span id="playIcon">▶</span> <span id="playTxt">Play</span></button>
+          <button id="stepBtn">Step →</button>
+          <button id="resetBtn">↺ Reset</button>
+        </div>
+        <div class="speed">
+          <label>Speed</label>
+          <input id="speed" type="range" min="180" max="1400" value="720" step="20">
+        </div>
+        <p class="hint">Shortcuts: space = play/pause · → = step</p>
+      </div>
+
+      <div class="block">
+        <h2>Current state</h2>
+        <div class="stats">
+          <div class="stat"><div class="k">iteration n</div><div class="v" id="stN">0</div></div>
+          <div class="stat"><div class="k">estimate xₙ</div><div class="v" id="stX">—</div></div>
+          <div class="stat"><div class="k">f(xₙ)</div><div class="v" id="stFx">—</div></div>
+          <div class="stat"><div class="k">step |Δx|</div><div class="v" id="stDx">—</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block log-card">
+    <h2>Iteration log</h2>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>n</th><th>xₙ</th><th>f(xₙ)</th><th>f′(xₙ)</th><th>xₙ₊₁</th><th>|Δx|</th></tr></thead>
+        <tbody id="logBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var FUNCS = [
+    {label:"x² − 2", f:function(x){return x*x-2;}, fp:function(x){return 2*x;},
+     x0:2, view:[0,2.4], note:"Textbook case — correct digits roughly double each step."},
+    {label:"x³ − x − 2", f:function(x){return x*x*x-x-2;}, fp:function(x){return 3*x*x-1;},
+     x0:1.5, view:[0.6,2.2], note:"Smooth and fast from a nearby start."},
+    {label:"cos(x) − x", f:function(x){return Math.cos(x)-x;}, fp:function(x){return -Math.sin(x)-1;},
+     x0:0.4, view:[0,1.6], note:"Converges to the fixed point of cos in a few steps."},
+    {label:"x³ − 2x + 2", f:function(x){return x*x*x-2*x+2;}, fp:function(x){return 3*x*x-2;},
+     x0:0, view:[-2.4,2.2], note:"Start x₀ = 0 → Newton cycles 0 ↔ 1 forever, never reaching the real root."},
+    {label:"arctan(x)", f:function(x){return Math.atan(x);}, fp:function(x){return 1/(1+x*x);},
+     x0:2, view:[-9,9], note:"Start x₀ = 2 → tangents overshoot and the iteration diverges."}
+  ];
+  var TOL = 1e-10, MAXIT = 20, DIVERGE = 1e6;
+
+  var $ = function(id){return document.getElementById(id);};
+  var svgStatic = $('static'), svgDyn = $('dynamic');
+  var reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  var M={l:46,r:16,t:18,b:34}, W=600, H=400;
+  var PL=M.l, PR=W-M.r, PT=M.t, PB=H-M.b, PW=PR-PL, PH=PB-PT;
+  var view={xmin:0,xmax:1,ymin:-1,ymax:1};
+  var state={}, playing=false, timer=null, token=0;
+
+  function fmt(v,d){
+    if(!isFinite(v)) return "—";
+    var a=Math.abs(v);
+    if(a!==0 && (a>=1e5 || a<1e-4)) return v.toExponential(3);
+    return v.toFixed(d===undefined?6:d);
+  }
+  function SX(x){ return PL+(x-view.xmin)/(view.xmax-view.xmin)*PW; }
+  function SY(y){ return PB-(y-view.ymin)/(view.ymax-view.ymin)*PH; }
+  function cx(p){ return Math.max(PL,Math.min(PR,p)); }
+  function cy(p){ return Math.max(PT,Math.min(PB,p)); }
+
+  function niceStep(range){
+    var raw=range/6, mag=Math.pow(10,Math.floor(Math.log10(raw))), n=raw/mag;
+    return (n<1.5?1:n<3?2:n<7?5:10)*mag;
+  }
+  function setupView(fn){
+    view.xmin=fn.view[0]; view.xmax=fn.view[1];
+    var lo=Infinity,hi=-Infinity;
+    for(var i=0;i<=240;i++){
+      var x=view.xmin+(view.xmax-view.xmin)*i/240, y=fn.f(x);
+      if(isFinite(y)){ if(y<lo)lo=y; if(y>hi)hi=y; }
+    }
+    if(lo>0)lo=0; if(hi<0)hi=0;
+    var m=0.14*(hi-lo||1); view.ymin=lo-m; view.ymax=hi+m;
+  }
+
+  function buildStatic(fn){
+    var s='', xs=niceStep(view.xmax-view.xmin), ys=niceStep(view.ymax-view.ymin);
+    for(var gx=Math.ceil(view.xmin/xs)*xs; gx<=view.xmax+1e-9; gx+=xs){
+      var X=SX(gx);
+      s+='<line x1="'+X.toFixed(1)+'" y1="'+PT+'" x2="'+X.toFixed(1)+'" y2="'+PB+'" stroke="var(--grid)" stroke-width="1"/>';
+      s+='<text x="'+X.toFixed(1)+'" y="'+(PB+16)+'" fill="var(--muted)" font-size="10" font-family="var(--mono)" text-anchor="middle">'+(+gx.toFixed(2))+'</text>';
+    }
+    for(var gy=Math.ceil(view.ymin/ys)*ys; gy<=view.ymax+1e-9; gy+=ys){
+      var Y=SY(gy);
+      s+='<line x1="'+PL+'" y1="'+Y.toFixed(1)+'" x2="'+PR+'" y2="'+Y.toFixed(1)+'" stroke="var(--grid)" stroke-width="1"/>';
+      s+='<text x="'+(PL-6)+'" y="'+(Y+3).toFixed(1)+'" fill="var(--muted)" font-size="10" font-family="var(--mono)" text-anchor="end">'+(+gy.toFixed(2))+'</text>';
+    }
+    var Y0=SY(0);
+    s+='<line x1="'+PL+'" y1="'+Y0.toFixed(1)+'" x2="'+PR+'" y2="'+Y0.toFixed(1)+'" stroke="var(--line)" stroke-width="1.5"/>';
+    var pts='';
+    for(var i=0;i<=360;i++){
+      var x=view.xmin+(view.xmax-view.xmin)*i/360, y=fn.f(x);
+      if(isFinite(y)) pts+=SX(x).toFixed(1)+','+Math.max(PT-60,Math.min(PB+60,SY(y))).toFixed(1)+' ';
+    }
+    s+='<polyline points="'+pts.trim()+'" fill="none" stroke="var(--curve)" stroke-width="2.4" stroke-linejoin="round" clip-path="url(#pclip)"/>';
+    svgStatic.innerHTML=s;
+  }
+
+  function elBase(xn){
+    var f=state.fn.f(xn), X=SX(xn), Yc=SY(f), Y0=SY(0);
+    var s='';
+    s+='<line x1="'+cx(X).toFixed(1)+'" y1="'+cy(Y0).toFixed(1)+'" x2="'+cx(X).toFixed(1)+'" y2="'+cy(Yc).toFixed(1)+'" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>';
+    s+='<circle cx="'+cx(X).toFixed(1)+'" cy="'+cy(Yc).toFixed(1)+'" r="4.5" fill="var(--ink)"/>';
+    s+='<circle cx="'+cx(X).toFixed(1)+'" cy="'+Y0.toFixed(1)+'" r="3" fill="var(--ink)"/>';
+    s+='<text x="'+cx(X).toFixed(1)+'" y="'+(Y0+15).toFixed(1)+'" fill="var(--ink)" font-size="11" font-family="var(--mono)" text-anchor="middle">x'+state.n+'</text>';
+    return s;
+  }
+  function elTangent(xn,op){
+    var f=state.fn.f(xn), fp=state.fn.fp(xn);
+    var yl=f+fp*(view.xmin-xn), yr=f+fp*(view.xmax-xn);
+    return '<line x1="'+SX(view.xmin).toFixed(1)+'" y1="'+SY(yl).toFixed(1)+'" x2="'+SX(view.xmax).toFixed(1)+'" y2="'+SY(yr).toFixed(1)+'" stroke="var(--tangent)" stroke-width="1.8" opacity="'+op.toFixed(2)+'" clip-path="url(#pclip)"/>';
+  }
+  function elSlider(x,y){
+    return '<circle cx="'+cx(SX(x)).toFixed(1)+'" cy="'+cy(SY(y)).toFixed(1)+'" r="5.5" fill="var(--tangent)"/>';
+  }
+  function elLanding(xnext){
+    var Y0=SY(0), X=SX(xnext);
+    return '<circle cx="'+cx(X).toFixed(1)+'" cy="'+Y0.toFixed(1)+'" r="4.5" fill="var(--tangent)"/>';
+  }
+
+  function tween(dur,onUpdate,onDone){
+    if(reduced){ onUpdate(1); if(onDone)onDone(); return; }
+    var start=null, tk=token;
+    function frame(ts){
+      if(tk!==token) return;
+      if(!start) start=ts;
+      var p=Math.min(1,(ts-start)/dur);
+      onUpdate(1-Math.pow(1-p,3));
+      if(p<1) requestAnimationFrame(frame); else if(onDone) onDone();
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function updateStats(){
+    $('stN').textContent=state.n;
+    $('stX').textContent = state.n>0? fmt(state.x):fmt(state.x);
+    $('stFx').textContent = fmt(state.fn.f(state.x));
+    $('stDx').textContent = state.lastDx===undefined?'—':fmt(state.lastDx);
+    var xv=$('stX'), fv=$('stFx');
+    xv.className='v'+(state.done&&state.converged?' keep':state.diverged?' bad':'');
+    fv.className='v'+(state.done&&state.converged?' keep':'');
+  }
+
+  function addLogRow(n,xn,f,fp,xnext,dx,conv){
+    var tr=document.createElement('tr');
+    if(conv) tr.className='converged';
+    tr.innerHTML='<td>'+n+'</td><td>'+fmt(xn)+'</td><td>'+fmt(f)+'</td><td>'+fmt(fp)+
+      '</td><td>'+fmt(xnext)+'</td><td class="dx">'+fmt(dx)+'</td>';
+    $('logBody').appendChild(tr); tr.scrollIntoView({block:'nearest'});
+  }
+
+  function doStep(cb){
+    if(state.done){ if(cb)cb(); return; }
+    var xn=state.x, f=state.fn.f(xn), fp=state.fn.fp(xn);
+    if(Math.abs(fp)<1e-13){
+      $('msg').textContent="f'(xₙ) ≈ 0 — flat tangent, Newton stalls."; $('msg').className='msg bad';
+      state.done=true; stopControls(); if(cb)cb(); return;
+    }
+    var xnext=xn-f/fp, dx=Math.abs(xnext-xn);
+    state.n++;
+    var diverged=Math.abs(xnext)>DIVERGE;
+    var conv=(dx<=TOL*(1+Math.abs(xnext))) || Math.abs(state.fn.f(xnext))<1e-13;
+    var done=conv||diverged||state.n>=MAXIT;
+
+    var hold=reduced?0:Math.max(120,state.speed*0.30);
+    svgDyn.innerHTML=elBase(xn)+elTangent(xn,0.35)+elTangent(xn,0);
+    tween(Math.max(120,state.speed*0.28), function(p){
+      svgDyn.innerHTML=elBase(xn)+elTangent(xn,0.35*p);
+    }, function(){
+      setTimeout(function(){
+        var tk=token;
+        tween(Math.max(160,state.speed*0.55), function(p){
+          var x=xn+(xnext-xn)*p, y=f*(1-p);
+          svgDyn.innerHTML=elBase(xn)+elTangent(xn,0.35)+elSlider(x,y);
+        }, function(){
+          if(tk!==token) return;
+          state.x=xnext; state.lastDx=dx; state.done=done;
+          state.converged=conv; state.diverged=diverged;
+          svgDyn.innerHTML=elLanding(xnext)+elBase(xnext);
+          updateStats();
+          addLogRow(state.n,xn,f,fp,xnext,dx,conv);
+          if(done) finish(conv,diverged);
+          if(cb) cb();
+        });
+      },hold);
+    });
+  }
+
+  function finish(conv,diverged){
+    stopPlay();
+    if(conv){ $('msg').textContent='Converged · root ≈ '+fmt(state.x); $('msg').className='msg ok'; }
+    else if(diverged){ $('msg').textContent='Diverging — |xₙ| blew up. Try a start nearer the root.'; $('msg').className='msg bad'; }
+    else{ $('msg').textContent='No convergence in '+MAXIT+' steps (it may be cycling).'; $('msg').className='msg bad'; }
+    stopControls();
+  }
+  function stopControls(){ $('stepBtn').disabled=true; $('playBtn').disabled=true; }
+
+  function stopPlay(){
+    playing=false; if(timer){clearTimeout(timer);timer=null;}
+    $('playIcon').textContent='▶'; $('playTxt').textContent='Play';
+  }
+  function loop(){
+    if(!playing||state.done){ stopPlay(); return; }
+    doStep(function(){
+      if(playing&&!state.done) timer=setTimeout(loop,Math.max(60,state.speed*0.18));
+      else stopPlay();
+    });
+  }
+  function togglePlay(){
+    if(state.done) return;
+    if(playing) stopPlay();
+    else{ playing=true; $('playIcon').textContent='❚❚'; $('playTxt').textContent='Pause'; loop(); }
+  }
+
+  function reset(keepInput){
+    token++; stopPlay();
+    var fn=state.fn;
+    var x0=keepInput?parseFloat($('x0In').value):fn.x0;
+    if(!isFinite(x0)) x0=fn.x0;
+    $('x0In').value=x0;
+    $('logBody').innerHTML='';
+    $('stepBtn').disabled=false; $('playBtn').disabled=false;
+    state.x=x0; state.n=0; state.done=false; state.converged=false; state.diverged=false; state.lastDx=undefined;
+    setupView(fn); buildStatic(fn); svgDyn.innerHTML=elBase(x0); updateStats();
+    $('msg').textContent='Ready — tangent at x₀ = '+fmt(x0,4)+'.'; $('msg').className='msg';
+  }
+
+  function loadFn(idx){
+    state.fn=FUNCS[idx]; state.speed=1580-parseInt($('speed').value);
+    $('fxLabel').textContent='f(x) = '+FUNCS[idx].label;
+    $('fxNote').textContent=FUNCS[idx].note;
+    reset(false);
+  }
+
+  var sel=$('fnSel');
+  FUNCS.forEach(function(fn,i){
+    var o=document.createElement('option'); o.value=i; o.textContent='f(x) = '+fn.label; sel.appendChild(o);
+  });
+  sel.addEventListener('change',function(){ loadFn(+sel.value); });
+  $('x0In').addEventListener('change',function(){ reset(true); });
+  $('speed').addEventListener('input',function(){ state.speed=1580-parseInt($('speed').value); });
+  $('stepBtn').addEventListener('click',function(){ if(!playing) doStep(); });
+  $('playBtn').addEventListener('click',togglePlay);
+  $('resetBtn').addEventListener('click',function(){ reset(false); });
+  document.addEventListener('keydown',function(e){
+    if(e.code==='Space'){ e.preventDefault(); togglePlay(); }
+    else if(e.code==='ArrowRight'){ e.preventDefault(); if(!playing) doStep(); }
+  });
+
+  loadFn(0);
+})();
+</script>
+</body>
+</html>
