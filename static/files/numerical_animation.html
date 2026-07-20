@@ -62,7 +62,7 @@
   input[type=text]:focus,input[type=number]:focus{outline:2px solid var(--curve); outline-offset:1px}
   .fx-wrap{position:relative}
   .fx-prefix{position:absolute; left:10px; top:50%; transform:translateY(-50%); font-family:var(--mono); font-size:15px; color:var(--muted); pointer-events:none}
-  input.fx{padding-left:46px}
+  input.fx{padding-left:62px}
 
   .chips{display:flex; gap:6px; flex-wrap:wrap; margin-top:8px}
   .chip{font-family:var(--mono); font-size:12px; color:var(--muted); background:var(--paper); border:0.5px solid var(--line); border-radius:7px; padding:5px 9px; cursor:pointer; transition:background .12s,color .12s}
@@ -118,8 +118,7 @@
 <div class="wrap">
   <header>
     <p class="eyebrow">interactive numerics</p>
-    <h1>Root-finding &amp; optimization <span>· type your own f(x)</span></h1>
-    <p class="lede">Four classic algorithms on one page. Enter any function of <b>x</b>, pick a start, and step through it. The x-axis is fixed to <b>[−10, 10]</b> so every method shares the same stage.</p>
+    <h1>Root-finding &amp; optimization</h1>
   </header>
 
   <div class="tabs" id="tabs">
@@ -604,7 +603,7 @@
     function logRow(n,a,b,c,fc,w,done){
       var tr=document.createElement('tr'); if(done)tr.className='converged';
       tr.innerHTML='<td>'+n+'</td><td>'+fmt(a,6)+'</td><td>'+fmt(b,6)+'</td><td>'+fmt(c,6)+'</td><td>'+fmt(fc,6)+'</td><td class="hl2">'+fmt(w,6)+'</td>';
-      $(P+'-log').appendChild(tr); tr.scrollIntoView({block:'nearest'});
+      $(P+'-log').appendChild(tr); var sc=tr.closest('.tbl-scroll'); if(sc) sc.scrollTop=sc.scrollHeight;
     }
     function doStep(cb){
       if(st.done){ if(cb)cb(); return; }
@@ -695,7 +694,7 @@
     function logRow(n,xn,f,fp,xn1,dx,conv){
       var tr=document.createElement('tr'); if(conv)tr.className='converged';
       tr.innerHTML='<td>'+n+'</td><td>'+fmt(xn,6)+'</td><td>'+fmt(f,6)+'</td><td>'+fmt(fp,6)+'</td><td>'+fmt(xn1,6)+'</td><td class="hl">'+fmt(dx,6)+'</td>';
-      $(P+'-log').appendChild(tr); tr.scrollIntoView({block:'nearest'});
+      $(P+'-log').appendChild(tr); var sc=tr.closest('.tbl-scroll'); if(sc) sc.scrollTop=sc.scrollHeight;
     }
     function doStep(cb){
       if(st.done){ if(cb)cb(); return; }
@@ -795,7 +794,7 @@
     function logRow(n,xn,f,fp,step,xn1,conv){
       var tr=document.createElement('tr'); if(conv)tr.className='converged';
       tr.innerHTML='<td>'+n+'</td><td>'+fmt(xn,5)+'</td><td>'+fmt(f,5)+'</td><td>'+fmt(fp,5)+'</td><td class="hl">'+fmt(step,5)+'</td><td>'+fmt(xn1,5)+'</td>';
-      $(P+'-log').appendChild(tr); tr.scrollIntoView({block:'nearest'});
+      $(P+'-log').appendChild(tr); var sc=tr.closest('.tbl-scroll'); if(sc) sc.scrollTop=sc.scrollHeight;
     }
     function doStep(cb){
       if(st.done){ if(cb)cb(); return; }
@@ -892,7 +891,7 @@
     function logRow(t,xn,g,mh,rv,dx,xn1,conv){
       var tr=document.createElement('tr'); if(conv)tr.className='converged';
       tr.innerHTML='<td>'+t+'</td><td>'+fmt(xn,4)+'</td><td>'+fmt(g,4)+'</td><td>'+fmt(mh,4)+'</td><td>'+fmt(rv,4)+'</td><td class="hl">'+fmt(dx,4)+'</td><td>'+fmt(xn1,4)+'</td>';
-      $(P+'-log').appendChild(tr); tr.scrollIntoView({block:'nearest'});
+      $(P+'-log').appendChild(tr); var sc=tr.closest('.tbl-scroll'); if(sc) sc.scrollTop=sc.scrollHeight;
     }
     function doStep(cb){
       if(st.done){ if(cb)cb(); return; }
