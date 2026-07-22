@@ -137,19 +137,21 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 
 ### Week 3 Lecture 13 (7/22)
 - <a href="/lecture/L10-Neural_Nets_III.pdf" download="L10-Neural_Nets_III.pdf"> Neural Nets III (pdf)</a>
-- <a href="/lecture/L11-Bayesian_Analysis.pdf" download="L11-Bayesian_Analysis.pdf"> Bayesian Analysis (pdf)</a>
 - <a href="/lecture/gunrock2026.pdf" download="gunrock2026.pdf">Gunrock 2026 HW (pdf)</a>
+
+### Week 3 Lecture 14 (7/23)
+- <a href="/lecture/L11-Bayesian_Analysis.pdf" download="L11-Bayesian_Analysis.pdf"> Bayesian Analysis (pdf)</a>
 - <a href="/lecture/Bayes_Freq_Test.ipynb" download="Bayes_Freq_Test.ipynb">Bayes Freq Test (ipynb)</a>
 - <a href="/lecture/Posterior_Computation.ipynb" download="Posterior_Computation.ipynb">Posterior Computation (ipynb)</a>
 - <a href="/lecture/Variational_Inference.ipynb" download="Variational_Inference.ipynb">Variational Inference (ipynb)</a>
 
 
-### Week 3 Lecture 14 (7/23)
+### Week 3 Lecture 15 (7/24)
 - <a href="/lecture/L12-Statistical_Inference.pdf" download="L12-Statistical_Inference.pdf"> Statistical Inference (pdf)</a>
 - <a href="/lecture/L13-Causal_Inference.pdf" download="L13-Causal_Inference.pdf">L13 Causal Inference (pdf)</a>
 - <a href="/lecture/L13-Ethics.pdf" download="L13-Ethics.pdf">L13 Ethics (pdf)</a>
 
-### Week 3 Lecture 15 (7/23)
+### Week 4 Lecture 16 (7/27)
 
 
 
