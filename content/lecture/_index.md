@@ -137,6 +137,13 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 
 ### Week 3 Lecture 13 (7/22)
 - <a href="/lecture/L10-Neural_Nets_III.pdf" download="L10-Neural_Nets_III.pdf"> Neural Nets III (pdf)</a>
+- <a href="/lecture/L12-Statistical_Inference.pdf" download="L12-Statistical_Inference.pdf"> Statistical Inference (pdf)</a>
+- <a href="/lecture/CLT.ipynb" download="CLT.ipynb">CLT (ipynb)</a>
+- <a href="/lecture/Confidence_Interval.ipynb" download="Confidence_Interval.ipynb">Confidence Interval (ipynb)</a>
+- <a href="/lecture/Hypothesis_Testing.ipynb" download="Hypothesis_Testing.ipynb">Hypothesis Testing (ipynb)</a>
+- <a href="/lecture/Multiple_Testing.ipynb" download="Multiple_Testing.ipynb">Multiple Testing (ipynb)</a>
+- <a href="/lecture/Rank-based_Tests.ipynb" download="Rank-based_Tests.ipynb">Rank-based Tests (ipynb)</a>
+- <a href="/lecture/Simulation_Tests.ipynb" download="Simulation_Tests.ipynb">Simulation Tests (ipynb)</a>
 - <a href="/lecture/gunrock2026.pdf" download="gunrock2026.pdf">Gunrock 2026 HW (pdf)</a>
 
 ### Week 3 Lecture 14 (7/23)
@@ -147,7 +154,6 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 
 
 ### Week 3 Lecture 15 (7/24)
-- <a href="/lecture/L12-Statistical_Inference.pdf" download="L12-Statistical_Inference.pdf"> Statistical Inference (pdf)</a>
 - <a href="/lecture/L13-Causal_Inference.pdf" download="L13-Causal_Inference.pdf">L13 Causal Inference (pdf)</a>
 - <a href="/lecture/L13-Ethics.pdf" download="L13-Ethics.pdf">L13 Ethics (pdf)</a>
 
