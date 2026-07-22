@@ -127,9 +127,9 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 - <a href="/lecture/dataset_links.pdf" download="dataset_links.pdf">Dataset links (pdf)</a>
 
 ### Week 3 Lecture 11 (7/20)
-- <a href="/lecture/L10-Neural_Nets_I.pdf" download="L10-Neural_Nets_I.pdf">L10 Neural Nets I (pdf)</a>
+- <a href="/lecture/L10-Neural_Nets_I.pdf" download="L10-Neural_Nets_I.pdf">L11 Neural Nets I (pdf)</a>
 - <a href="/lecture/MLP.ipynb" download="MLP.ipynb">MLP (ipynb)</a>
-- <a href="/lecture/L10-Neural_Nets_II.pdf" download="L10-Neural_Nets_II.pdf">L10 Neural Nets II (pdf)</a>
+- <a href="/lecture/L10-Neural_Nets_II.pdf" download="L10-Neural_Nets_II.pdf">L11 Neural Nets II (pdf)</a>
 - <a href="/lecture/CNN.ipynb" download="CNN.ipynb">CNN (ipynb)</a>
 - <a href="/lecture/Transformer_Overview_Example.ipynb" download="Transformer_Overview_Example.ipynb">Transformer Overview Example (ipynb)</a>
 
