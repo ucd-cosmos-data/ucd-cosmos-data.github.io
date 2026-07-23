@@ -149,7 +149,7 @@ The code above displays `LINK_TEXT` on the page. Clicking `LINK_TEXT` downloads 
 ### Week 3 Lecture 14 (7/23)
 - <a href="/lecture/L11-Bayesian_Analysis.pdf" download="L11-Bayesian_Analysis.pdf"> Bayesian Analysis (pdf)</a>
 - <a href="/lecture/L13-Causal_Inference.pdf" download="L13-Causal_Inference.pdf"> Causal Inference (pdf)</a>
-- <a href="/lecture/Ethics.pdf" download="Ethics.pdf">Ethics (pdf)</a>
+- <a href="/lecture/L12-Ethics.pdf" download="L12-Ethics.pdf">Ethics (pdf)</a>
 - <a href="/lecture/Bayes_Freq_Test.ipynb" download="Bayes_Freq_Test.ipynb">Bayes Freq Test (ipynb)</a>
 - <a href="/lecture/Posterior_Computation.ipynb" download="Posterior_Computation.ipynb">Posterior Computation (ipynb)</a>
 - <a href="/lecture/Variational_Inference.ipynb" download="Variational_Inference.ipynb">Variational Inference (ipynb)</a>
