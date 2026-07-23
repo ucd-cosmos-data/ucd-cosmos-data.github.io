@@ -27,11 +27,11 @@ Build your own neural network to predict `y` from `X`. You may use Codex to writ
 - <a href="/files/y_train.csv" download="y_train.csv">y_train</a>
 
 **Test set**
+
 Will be provided at the end of lab session. Your model will be evaluated on test data. Whoever achieves the lowest test loss will receive a special prize on Friday!
 
 > All variables are already properly scaled. No need to do further scaling.
 
-<!-->
 - <a href="/files/X_test.csv" download="X_test.csv">X_test</a>
 - <a href="/files/y_test.csv" download="y_test.csv">y_test</a>
 
@@ -52,5 +52,5 @@ test_loss = nn.MSELoss()(y_test_pred, y_test)
 
 print(f'Test loss: {test_loss: .4f}')
 ```
-<!-->
+
 
